@@ -19,7 +19,7 @@ const ProductTabs: React.FC = () => {
   return (
     <section className="w-full py-12 px-4 flex flex-col items-center bg-white">
       <div className="mb-8">
-        <h2 className="text-2xl md:text-5xl font-bold text-green-400 text-center mb-2">Nuestros Productos</h2>
+        <h2 className="text-2xl md:text-5xl font-bold text-primary text-center mb-2">Nuestros Productos</h2>
         <p className="text-[#939393] text-center text-lg max-w-xl">Naturalmente saludable, para tu mejor versión</p>
       </div>
       {/* Tabs de categorías (no funcionales aún) */}
@@ -44,13 +44,13 @@ const ProductTabs: React.FC = () => {
         ) : (
           filteredProducts.map((product) => (
             <div key={product.id} className="bg-white rounded-lg p-4 flex flex-col items-center relative" data-aos="fade-up">
-              <div className="absolute top-6 left-6 transform rotate-[-15deg] bg-white rounded-full shadow-lg z-10 w-14 h-14 flex items-center justify-center border-2 border-green-400">
-                <span className="font-bold text-lg text-green-400">${product.price.toFixed(2)}</span>
+              <div className="absolute top-6 left-6 transform rotate-[-15deg] rounded-full shadow-lg z-10 w-14 h-14 flex items-center justify-center  bg-primary">
+                <span className="font-bold text-lg text-white">${product.price.toFixed(2)}</span>
               </div>
               <img src="https://laticamp.com/wp-content/uploads/2024/02/tofdos-los-sabores-sin-fondo-1.1-300x300.png" alt={product.name} className="w-64 h-64 rounded mb-4" />
               <span className="font-light text-xl text-[#253d4e] text-center">{product.name}</span>
               <button
-                className="btn btn-success text-white px-4 py-2 rounded-xl mt-2  transition-colors flex gap-2 items-center justify-center"
+                className="bg-primary text-white px-4 py-2 rounded-xl mt-2  transition-colors flex gap-2 items-center justify-center"
                 onClick={() => { addToCart(product); toast.success('Producto agregado al carrito'); }}
                 aria-label={`Agregar ${product.name} al carrito`}
               >

@@ -1,36 +1,48 @@
 import React from "react";
 
 const CategoryHighlights: React.FC = () => (
-  <section className="w-full flex flex-wrap justify-center gap-6 px-4 py-8">
-    {/* Super Healthy */}
-    <div className="w-full md:w-[280px] bg-pink-100 rounded-lg p-4 flex flex-col justify-between">
-      <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=400&q=80" alt="Meat" className="rounded mb-3 h-20 object-cover" />
-      <span className="font-bold text-[#253d4e] text-lg">Mantequilla de Maní</span>
-      <button className="mt-2 bg-primary text-white px-4 py-1 rounded-full text-sm">Shop Now</button>
-    </div>
-    {/* Fresh Fruits */}
-    <div className="w-full md:w-[280px] bg-yellow-100 rounded-lg p-4 flex flex-col justify-between">
-      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Fruits" className="rounded mb-3 h-20 object-cover" />
-      <span className="font-bold text-[#253d4e] text-lg">Granola Natural</span>
-      <span className="text-xs">Flat 25% Discount</span>
-      <button className="mt-2 bg-primary text-white px-4 py-1 rounded-full text-sm">Shop Now</button>
-    </div>
-    {/* Fresh Vegetables */}
-    <div className="w-full md:w-[340px] bg-green-100 rounded-lg p-4 flex flex-row items-center justify-between gap-2">
-      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Vegetables" className="rounded mb-3 h-20 object-cover" />
-      <div className="flex flex-col">
-        <span className="font-bold text-[#253d4e] text-lg">Aceites & Vinagres</span>
+  <div className="flex w-full items-center justify-center p-1 sm:p-2 md:p-3">
+    <div className="grid w-full max-w-5xl gap-1 sm:gap-2 bg-gray-200 p-1 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 auto-rows-[100px] rounded-lg shadow-md">
+      <div className="col-span-2 sm:col-span-1 row-span-2 bg-pink-100 rounded-lg shadow-md flex flex-col items-center justify-center p-1 sm:p-2 md:p-3">
+        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=400&q=80" alt="Meat" className="rounded mb-1 h-12 object-cover" />
+        <span className="font-bold text-[#253d4e] text-base">Mantequilla de Maní</span>
+        <button className="bg-primary text-white px-2 py-0.5 rounded-full text-xs">Shop Now</button>
+      </div>
+
+      <div className="col-span-1 row-span-1 bg-yellow-100 rounded-lg shadow-md flex flex-col items-center justify-center p-1 sm:p-2 md:p-3">
+        <span className="font-bold text-[#253d4e] text-base">Granola Natural</span>
+      </div>
+
+      <div className="col-span-2 sm:col-span-2 lg:col-span-2 row-span-2 lg:row-span-3 bg-green-100 rounded-lg shadow-md flex flex-col items-center justify-center p-1 sm:p-2 md:p-3">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Vegetables" className="rounded mb-1 h-12 object-cover" />
+        <span className="font-bold text-[#253d4e] text-base">Aceites & Vinagres</span>
         <span className="text-xs">Get 30% Off Your Order</span>
-        <button className="mt-2 bg-primary text-white px-4 py-1 rounded-full text-sm">Shop Now</button>
+        <button className="bg-primary text-white px-2 py-0.5 rounded-full text-xs">Shop Now</button>
+      </div>
+
+      <div className="col-span-1 row-span-2 bg-cyan-100 rounded-lg shadow-md flex flex-col items-center justify-center p-1 sm:p-2 md:p-3">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Organic" className="rounded mb-1 h-12 object-cover" />
+        <span className="font-bold text-[#253d4e] text-base">Snacks Saludables</span>
+        <button className="bg-primary text-white px-2 py-0.5 rounded-full text-xs">Shop Now</button>
+      </div>
+
+      <div className="col-span-1 row-span-1 bg-lime-200 rounded-lg shadow-md flex items-center justify-center p-1 sm:p-2 md:p-3">
+        <span className="font-bold text-[#253d4e] text-lg">Semillas</span>
+      </div>
+
+      <div className="col-span-2 sm:col-span-2 lg:col-span-2 row-span-2 lg:row-span-3 bg-red-200 rounded-lg shadow-md flex items-center justify-center p-1 sm:p-2 md:p-3">
+        <span className="font-bold text-[#253d4e] text-lg">Frutos Secos</span>
+      </div>
+
+      <div className="col-span-1 row-span-2 lg:row-span-3 bg-gray-300 rounded-lg shadow-md flex items-center justify-center p-1 sm:p-2 md:p-3">
+        <span className="font-bold text-[#253d4e] text-lg">Cereales</span>
+      </div>
+
+      <div className="col-span-1 row-span-2 lg:row-span-3 bg-yellow-100 rounded-lg shadow-md flex items-center justify-center p-1 sm:p-2 md:p-3">
+        <span className="font-bold text-[#253d4e] text-lg">Proteínas</span>
       </div>
     </div>
-    {/* 100% Organic */}
-    <div className="w-full md:w-[280px] bg-cyan-100 rounded-lg p-4 flex flex-col justify-between">
-      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Organic" className="rounded mb-3 h-20 object-cover" />
-      <span className="font-bold text-[#253d4e] text-lg">Snacks Saludables</span>
-      <button className="mt-2 bg-primary text-white px-4 py-1 rounded-full text-sm">Shop Now</button>
-    </div>
-  </section>
+  </div>
 );
 
 export default CategoryHighlights;
