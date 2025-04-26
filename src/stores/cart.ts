@@ -24,12 +24,21 @@ export const useCartStore = create<CartState>()(
         if (existing) {
           return {
             items: state.items.map((item) =>
-              item.id === product.id ? { ...item, quantity: item.quantity + quantity } : item
+              item.id === product.id
+                ? { ...item, quantity: Number(item.quantity) + Number(quantity) }
+                : item
             ),
           };
         }
         return {
-          items: [...state.items, { ...product, quantity }],
+          items: [
+            ...state.items,
+            {
+              ...product,
+              price: Number(product.price) || 0,
+              quantity: Number(quantity) || 1,
+            },
+          ],
         };
       });
     },
@@ -45,7 +54,14 @@ export const useCartStore = create<CartState>()(
       }));
     },
     get total() {
-      return get().items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+      return get().items.reduce(
+        (sum, item) =>
+          sum + (Number(item.price) || 0) * (Number(item.quantity) || 1),
+        0
+      );
     },
+    get itemCount() {
+      return get().items.reduce((sum, item) => sum + (item.quantity ?? 0), 0);
+    }
   }))
 );

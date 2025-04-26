@@ -4,7 +4,7 @@ import "react-modern-drawer/dist/index.css";
 import { useNavigate } from "react-router";
 import { useCartStore } from "../stores/cart";
 import { useProductsStore } from "../stores/products";
-import { ShoppingBag, Trash } from "lucide-react";
+import { Minus, Plus, ShoppingBag, Trash } from "lucide-react";
 
 
 const Header: React.FC = () => {
@@ -103,12 +103,12 @@ const Header: React.FC = () => {
               <div className="text-gray-500 text-center">Tu carrito está vacío.</div>
             ) : (
               items.map(item => (
-                <div key={item.id} className="flex items-start gap-3 border-b pb-4 pt-2 last:border-b-0">
+                <div key={item.id} className="flex gap-3 border-b pb-4 pt-2 last:border-b-0 items-center">
                   <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded" />
-                  <div className="flex-1 flex flex-col justify-between min-w-0">
+                  <div className="flex-1 flex flex-col justify-between min-w-0 items-center">
                     <div className="flex flex-col min-w-0">
                       <span className="font-semibold text-[15px] text-[#222] leading-tight truncate">{item.name}</span>
-                      <span className="truncate">S/. {item.price.toFixed(2)}</span>
+                      <span>150 mll</span>
                     </div>
                     <div className="flex items-center gap-2 mt-2">
                       <div className="flex items-center bg-gray-100 rounded-lg border border-gray-300 px-1">
@@ -123,26 +123,25 @@ const Header: React.FC = () => {
                           disabled={item.quantity <= 1}
                           tabIndex={0}
                         >
-                          <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeWidth="2" strokeLinecap="round" d="M6 12h12" /></svg>
+                          <Minus className="w-4 h-4" />
                         </button>
-                        <span className="font-semibold text-base w-7 text-center select-none">{item.quantity}</span>
+                        <span className="">{item.quantity}</span>
                         <button
                           className="w-7 h-7 flex items-center justify-center text-gray-500 hover:text-[#3fbb38]"
                           aria-label={`Aumentar cantidad de ${item.name}`}
                           onClick={() => useCartStore.getState().updateQuantity(item.id, item.quantity + 1)}
                           tabIndex={0}
                         >
-                          <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeWidth="2" strokeLinecap="round" d="M12 6v12m6-6H6" /></svg>
+                          <Plus className="w-4 h-4" />
                         </button>
                       </div>
                       <button
-                        className="btn btn-error"
+                        className="btn btn-ghost btn-sm"
                         aria-label={`Eliminar ${item.name} del carrito`}
                         onClick={() => useCartStore.getState().removeFromCart(item.id)}
                         tabIndex={0}
                       >
-                        <Trash className="w-4 h-4" />
-
+                        <Trash className="w-4 h-4" color="red" />
                       </button>
                     </div>
                   </div>
