@@ -34,11 +34,11 @@ const Header: React.FC = () => {
     : [];
 
   return (
-    <header className="w-full bg-white shadow flex items-center py-3 px-4 md:px-8 gap-4 md:gap-6">
+    <header className="w-full bg-white shadow flex items-center justify-between py-3 px-4 md:px-8 gap-4 md:gap-6">
       <div className="flex items-center gap-2">
         <span className="font-bold text-2xl text-[#3fbb38]">VitaLight</span>
       </div>
-      <div className="flex-grow flex items-center relative">
+      <div className="flex-grow items-center relative hidden md:flex ">
         <input
           className="input rounded-l-xl rounded-r-none"
           placeholder="Buscar producto..."
@@ -84,9 +84,9 @@ const Header: React.FC = () => {
             if (items.length > 0) setDrawerOpen(true);
           }}
         >
-          <ShoppingBag className="w-8 h-8" />
+          <ShoppingBag className="w-8 h-8 text-primary" />
           {items.length > 0 && (
-            <span className="absolute top-0 right-0 bg-[#3fbb38] text-white rounded-full px-1 text-xs">{items.length}</span>
+            <span className="absolute top-0 right-0 bg-green-500 text-white rounded-full px-1 text-xs">{items.length}</span>
           )}
         </button>
       </div>
@@ -99,7 +99,7 @@ const Header: React.FC = () => {
       >
         <div className="flex flex-col h-full">
           <div className="flex justify-between items-center p-4 border-b">
-            <span className="text-xl font-bold text-[#3fbb38]">Tu Carrito</span>
+            <span className="text-xl font-bold text-primary">Tu Carrito</span>
             <button onClick={() => setDrawerOpen(false)} aria-label="Cerrar carrito" className="text-gray-500 hover:text-red-500 text-2xl">×</button>
           </div>
           <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4">
@@ -159,10 +159,10 @@ const Header: React.FC = () => {
           <div className="p-4 border-t flex flex-col gap-3">
             <div className="flex justify-between items-center">
               <span className="font-semibold">Total</span>
-              <span className="font-bold text-lg text-[#3fbb38]">${total.toFixed(2)}</span>
+              <span className="font-bold text-lg ">S/. {total.toFixed(2)}</span>
             </div>
             <button
-              className="bg-[#3fbb38] text-white font-semibold rounded-lg py-3 px-4 hover:bg-[#34a32f] transition-colors focus:outline-none focus:ring-2 focus:ring-[#3fbb38]"
+              className="btn btn-success rounded-lg"
               onClick={() => {
                 setDrawerOpen(false);
                 navigate("/cart");

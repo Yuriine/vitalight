@@ -35,10 +35,8 @@ const Cart: React.FC = () => {
 
   return (
     <div
-      className="min-h-screen py-10 bg-cover bg-center bg-no-repeat relative"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-      }}
+      className="min-h-screen py-10 bg-cover bg-center bg-no-repeat relative bg-primary"
+
     >
       {/* Overlay para mejorar legibilidad */}
       <div className="absolute inset-0 bg-base-200/80 pointer-events-none z-0" />
@@ -46,7 +44,7 @@ const Cart: React.FC = () => {
         {/* Botón seguir comprando */}
         <div className="mb-2 flex">
           <button
-            className="btn btn-link"
+            className="btn btn-success rounded-lg"
             onClick={() => navigate("/")}
             type="button"
           >
@@ -70,24 +68,22 @@ const Cart: React.FC = () => {
             ) : (
               <ul className="flex flex-col gap-4">
                 {items.map(item => (
-                  <li key={item.id} className="flex gap-4 items-center bg-base-200/80 rounded-xl p-3  transition border border-base-300">
+                  <li key={item.id} className="flex gap-4 items-center bg-base-200/80 rounded-xl   transition ">
                     <div className="avatar">
                       <div className="w-16 h-16 rounded-xl border border-base-300 bg-base-100">
                         <img src={item.image} alt={item.name} className="object-cover w-full h-full" />
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="flex justify-between items-center">
-                        <span className="font-bold text-lg truncate">{item.name}</span>
-                        <button className="btn btn-circle btn-ghost btn-sm hover:bg-error/10" onClick={() => removeFromCart(item.id)} aria-label={`Eliminar ${item.name}`}>
-                          <Trash className="w-5 h-5 text-error" />
-                        </button>
-                      </div>
-                      <div className="flex gap-2 items-center mt-1">
-                        <span className="badge badge-outline badge-lg">x{item.quantity}</span>
+                      <span className="font-bold text-lg truncate">{item.name}</span>
+                      <div className="flex  items-center mt-1 gap-4">
+                        <span className="badge badge-success badge-soft badge-lg text-base">x{item.quantity} </span>
                         <span className="text-success font-semibold text-base">S/. {(item.price * item.quantity).toFixed(2)}</span>
                       </div>
                     </div>
+                    <button className="btn btn-circle" onClick={() => removeFromCart(item.id)} aria-label={`Eliminar ${item.name}`}>
+                      <Trash className="w-5 h-5 text-error" />
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -110,18 +106,18 @@ const Cart: React.FC = () => {
             <h2 className="text-xl font-bold mb-4">Datos para tu pedido</h2>
             <form className="flex flex-col gap-4">
               <label className="form-control w-full">
-                <input className="input input-bordered input-lg w-full rounded-lg" value={name} onChange={e => setName(e.target.value)} placeholder="Tu nombre completo" />
+                <input className="input  rounded-lg" value={name} onChange={e => setName(e.target.value)} placeholder="Tu nombre completo" />
               </label>
               <label className="form-control w-full">
-                <input className="input input-bordered input-lg w-full rounded-lg" value={phone} onChange={e => setPhone(e.target.value)} placeholder="Tu número de WhatsApp" />
+                <input className="input  rounded-lg" value={phone} onChange={e => setPhone(e.target.value)} placeholder="Tu número de WhatsApp" />
               </label>
               <label className="form-control w-full">
-                <input className="input input-bordered input-lg w-full rounded-lg" value={address} onChange={e => setAddress(e.target.value)} placeholder="Dirección de entrega" />
+                <input className="input  rounded-lg" value={address} onChange={e => setAddress(e.target.value)} placeholder="Dirección de entrega" />
               </label>
 
               <button
                 type="button"
-                className="btn btn-success btn-lg w-full mt-2 shadow-md rounded-lg"
+                className="btn btn-success btn-rounded-xl"
                 onClick={handleWhatsappOrder}
                 disabled={items.length === 0 || !name || !phone || !address || !email}
               >
@@ -129,7 +125,7 @@ const Cart: React.FC = () => {
               </button>
               <button
                 type="button"
-                className="btn btn-ghost btn-lg w-full mt-2 rounded-lg"
+                className="btn btn-ghost text-red-500 rounded-xl"
                 onClick={() => {
                   clearCart();
                   navigate("/");
