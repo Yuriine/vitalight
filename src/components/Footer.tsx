@@ -5,7 +5,7 @@ const Footer: React.FC = () => (
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
       {/* Logo y nombre */}
       <div className="flex items-center gap-2 mb-4 md:mb-0">
-        <span className="font-bold text-2xl text-green-700">hyori</span>
+        <span className="font-bold text-2xl text-green-700">VitaLight</span>
         <span className="text-xs bg-white text-green-700 rounded px-2 py-1 ml-2 tracking-wide">pastel foods</span>
       </div>
       {/* Enlaces rápidos */}
@@ -30,7 +30,7 @@ const Footer: React.FC = () => (
         </a>
       </div>
     </div>
-    <p className="text-xs text-center text-green-700 mt-6 opacity-80">© 2025 Hyori. All rights reserved.</p>
+    <p className="text-xs text-center text-green-700 mt-6 opacity-80">© 2025 VitaLight. Todos los derechos reservados.</p>
   </footer>
 );
 
