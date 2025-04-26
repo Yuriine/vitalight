@@ -40,7 +40,7 @@ const Header: React.FC = () => {
       </div>
       <div className="flex-grow flex items-center relative">
         <input
-          className="border rounded-l-lg px-3 py-1 w-full lg:w-80 focus:outline-none text-sm md:text-base"
+          className="input rounded-l-xl rounded-r-none"
           placeholder="Buscar producto..."
           value={search}
           onChange={e => { setSearch(e.target.value); setShowDropdown(true); }}
@@ -48,7 +48,7 @@ const Header: React.FC = () => {
           onBlur={() => setTimeout(() => setShowDropdown(false), 120)}
           aria-label="Buscar producto"
         />
-        <button className="bg-[#3fbb38] text-white px-4 py-1 rounded-r-lg text-xs md:text-base" aria-label="Buscar">
+        <button className="btn btn-success text-white px-4 py-1 rounded-r-lg text-xs md:text-base" aria-label="Buscar">
           Buscar
         </button>
         {showDropdown && searchResults.length > 0 && (
