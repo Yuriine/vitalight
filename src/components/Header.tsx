@@ -1,13 +1,25 @@
-import React from "react";
-import { Link, useNavigate } from "react-router";
+import React, { useState } from "react";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
-import { useState } from "react";
+import { useNavigate } from "react-router";
 import { useCartStore } from "../stores/cart";
 import { useProductsStore } from "../stores/products";
+import { ShoppingBag, Trash } from "lucide-react";
+
 
 const Header: React.FC = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
+  React.useEffect(() => {
+    if (isDrawerOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isDrawerOpen]);
+
   const { items, total } = useCartStore();
   const navigate = useNavigate();
   const { products } = useProductsStore();
@@ -49,7 +61,10 @@ const Header: React.FC = () => {
                 aria-label={prod.name}
               >
                 <img src={prod.image} alt={prod.name} className="w-8 h-8 object-cover rounded" />
+
+
                 <span className="truncate">{prod.name}</span>
+
                 <span className="ml-auto text-xs text-[#3fbb38] font-semibold">${prod.price.toFixed(2)}</span>
               </li>
             ))}
@@ -58,15 +73,16 @@ const Header: React.FC = () => {
       </div>
       <div className="flex gap-4 items-center">
         <button
-          className="flex items-center text-[#3fbb38] focus:outline-none"
+          className="flex items-center text-[#3fbb38] focus:outline-none relative"
           type="button"
           aria-label="Ver carrito"
-          onClick={() => setDrawerOpen(true)}
+          onClick={() => {
+            if (items.length > 0) setDrawerOpen(true);
+          }}
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
-          <span className="hidden lg:block ml-1">Cart</span>
+          <ShoppingBag className="w-8 h-8" />
           {items.length > 0 && (
-            <span className="ml-2 bg-[#3fbb38] text-white rounded-full px-2 text-xs">{items.length}</span>
+            <span className="absolute top-0 right-0 bg-[#3fbb38] text-white rounded-full px-1 text-xs">{items.length}</span>
           )}
         </button>
       </div>
@@ -87,13 +103,52 @@ const Header: React.FC = () => {
               <div className="text-gray-500 text-center">Tu carrito está vacío.</div>
             ) : (
               items.map(item => (
-                <div key={item.id} className="flex items-center gap-3 border-b pb-3 last:border-b-0">
-                  <img src={item.image} alt={item.name} className="w-12 h-12 object-cover rounded border" />
-                  <div className="flex-1">
-                    <div className="font-semibold text-sm text-[#253d4e]">{item.name}</div>
-                    <div className="text-xs text-gray-500">x{item.quantity}</div>
+                <div key={item.id} className="flex items-start gap-3 border-b pb-4 pt-2 last:border-b-0">
+                  <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded" />
+                  <div className="flex-1 flex flex-col justify-between min-w-0">
+                    <div className="flex flex-col min-w-0">
+                      <span className="font-semibold text-[15px] text-[#222] leading-tight truncate">{item.name}</span>
+                      <span className="truncate">S/. {item.price.toFixed(2)}</span>
+                    </div>
+                    <div className="flex items-center gap-2 mt-2">
+                      <div className="flex items-center bg-gray-100 rounded-lg border border-gray-300 px-1">
+                        <button
+                          className="w-7 h-7 flex items-center justify-center text-gray-500 hover:text-[#3fbb38] disabled:opacity-40"
+                          aria-label={`Disminuir cantidad de ${item.name}`}
+                          onClick={() => {
+                            if (item.quantity > 1) {
+                              useCartStore.getState().updateQuantity(item.id, item.quantity - 1);
+                            }
+                          }}
+                          disabled={item.quantity <= 1}
+                          tabIndex={0}
+                        >
+                          <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeWidth="2" strokeLinecap="round" d="M6 12h12" /></svg>
+                        </button>
+                        <span className="font-semibold text-base w-7 text-center select-none">{item.quantity}</span>
+                        <button
+                          className="w-7 h-7 flex items-center justify-center text-gray-500 hover:text-[#3fbb38]"
+                          aria-label={`Aumentar cantidad de ${item.name}`}
+                          onClick={() => useCartStore.getState().updateQuantity(item.id, item.quantity + 1)}
+                          tabIndex={0}
+                        >
+                          <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeWidth="2" strokeLinecap="round" d="M12 6v12m6-6H6" /></svg>
+                        </button>
+                      </div>
+                      <button
+                        className="btn btn-error"
+                        aria-label={`Eliminar ${item.name} del carrito`}
+                        onClick={() => useCartStore.getState().removeFromCart(item.id)}
+                        tabIndex={0}
+                      >
+                        <Trash className="w-4 h-4" />
+
+                      </button>
+                    </div>
                   </div>
-                  <div className="font-bold text-[#3fbb38]">${(item.price * item.quantity).toFixed(2)}</div>
+                  <div className="flex flex-col items-end min-w-[70px]">
+                    <span className="font-bold text-[15px] text-[#222]">${item.price.toFixed(2)}</span>
+                  </div>
                 </div>
               ))
             )}

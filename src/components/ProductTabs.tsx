@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useProductsStore } from "../stores/products";
 import { useCartStore } from "../stores/cart";
+import toast from "react-hot-toast";
 
 const ProductTabs: React.FC = () => {
   const { products, isLoading, error, fetchProducts, activeCategory, getProductsByCategoryName } = useProductsStore();
@@ -43,7 +44,7 @@ const ProductTabs: React.FC = () => {
               <span className="text-green-600 font-medium text-sm mb-2">${product.price.toFixed(2)}</span>
               <button
                 className="bg-[#3fbb38] text-white px-4 py-2 rounded-full font-semibold mt-2 hover:bg-[#34a32f] transition-colors"
-                onClick={() => addToCart(product)}
+                onClick={() => { addToCart(product); toast.success('Producto agregado al carrito'); }}
                 aria-label={`Agregar ${product.name} al carrito`}
               >
                 Agregar al carrito

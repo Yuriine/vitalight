@@ -11,7 +11,7 @@ interface WhatsappOrderParams {
  * Genera un link de WhatsApp con el mensaje de pedido para VitaLight
  */
 export function formatWhatsappOrder({ name, phone, address, email, items, total }: WhatsappOrderParams): string {
-  const phoneNumber = "573001234567"; // Cambia por el número oficial VitaLight (sin +, incluye código país)
+  const phoneNumber = "51914019629"; // Cambia por el número oficial VitaLight (sin +, incluye código país)
   const productLines = items
     .map(
       (item) =>

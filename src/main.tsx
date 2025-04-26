@@ -9,6 +9,7 @@ import Cart from "./pages/Cart.tsx";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Toaster } from "react-hot-toast";
 
 const AppWithAOS: React.FC = () => {
   useEffect(() => {
@@ -24,6 +25,7 @@ const AppWithAOS: React.FC = () => {
           <Route path="cart" element={<Cart />} />
         </Route>
       </Routes>
+      <Toaster />
     </BrowserRouter>
   );
 };

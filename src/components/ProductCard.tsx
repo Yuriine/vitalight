@@ -1,5 +1,6 @@
 import type React from 'react';
 
+
 interface ProductCardProps {
   name: string;
   price: string;
