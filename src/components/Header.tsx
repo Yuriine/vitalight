@@ -1,13 +1,21 @@
+import { Minus, Plus, ShoppingBag, Trash, Menu, X } from "lucide-react";
 import React, { useState } from "react";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import { useNavigate } from "react-router";
 import { useCartStore } from "../stores/cart";
-import { useProductsStore } from "../stores/products";
-import { Minus, Plus, ShoppingBag, Trash } from "lucide-react";
+import Logo from "../assets/logo.png";
+
+const NAV_LINKS = [
+  { label: "Inicio", path: "/" },
+  { label: "Productos", path: "/products" },
+  { label: "Acerca de", path: "/about" },
+  { label: "Contacto", path: "/contact" },
+];
 
 
 const Header: React.FC = () => {
+  const [isNavDrawerOpen, setNavDrawerOpen] = useState(false);
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   React.useEffect(() => {
     if (isDrawerOpen) {
@@ -26,70 +34,90 @@ const Header: React.FC = () => {
     0
   );
   const navigate = useNavigate();
-  const { products } = useProductsStore();
-  const [search, setSearch] = useState("");
-  const [showDropdown, setShowDropdown] = useState(false);
-  const searchResults = search.length > 0
-    ? products.filter((p: { name: string }) => p.name.toLowerCase().includes(search.toLowerCase()))
-    : [];
 
   return (
-    <header className="w-full bg-white shadow flex items-center justify-between py-3 px-4 md:px-8 gap-4 md:gap-6">
-      <div className="flex items-center gap-2">
-        <span className="font-bold text-2xl text-[#3fbb38]">VitaLight</span>
-      </div>
-      <div className="flex-grow items-center relative hidden md:flex ">
-        <input
-          className="input rounded-l-xl rounded-r-none"
-          placeholder="Buscar producto..."
-          value={search}
-          onChange={e => { setSearch(e.target.value); setShowDropdown(true); }}
-          onFocus={() => setShowDropdown(true)}
-          onBlur={() => setTimeout(() => setShowDropdown(false), 120)}
-          aria-label="Buscar producto"
-        />
-        <button className="btn btn-success text-white px-4 py-1 rounded-r-lg text-xs md:text-base" aria-label="Buscar">
-          Buscar
-        </button>
-        {showDropdown && searchResults.length > 0 && (
-          <ul
-            className="absolute z-20 top-full left-0 w-full bg-white border rounded shadow-lg max-h-60 overflow-y-auto animate-fade-in"
-            data-aos="fade-down"
+    <>
+      <header className="fixed top-0 left-0 w-full z-50 bg-white shadow flex items-center justify-between py-3 px-4 md:px-8 gap-4 md:gap-6">
+        <div className="flex justify-between w-full items-center gap-2">
+          {/* Burger menu for mobile */}
+          <button
+            className="md:hidden mr-2 p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+            aria-label="Abrir menú de navegación"
+            onClick={() => setNavDrawerOpen(true)}
           >
-            {searchResults.map((prod: { id: number; name: string; image: string; price: number }) => (
-              <li
-                key={prod.id}
-                className="px-4 py-2 hover:bg-[#eaf8e5] cursor-pointer flex items-center gap-2"
-                onMouseDown={() => { navigate(`/products/${prod.id}`); setShowDropdown(false); setSearch(""); }}
-                tabIndex={0}
-                aria-label={prod.name}
+            <Menu className="w-7 h-7 text-primary" />
+          </button>
+          <img src={Logo} alt="Logo" className="w-14 h-14 md:w-20 md:h-20 " />
+
+          <div className="hidden md:flex gap-4 items-center">
+            {NAV_LINKS.map((link) => (
+              <button
+                key={link.label}
+                className="flex items-center text-primary focus:outline-none relative btn btn-link"
+                type="button"
+                aria-label={link.label}
+                onClick={() => navigate(link.path)}
               >
-                <img src={prod.image} alt={prod.name} className="w-8 h-8 object-cover rounded" />
-
-
-                <span className="truncate">{prod.name}</span>
-
-                <span className="ml-auto text-xs text-[#3fbb38] font-semibold">${prod.price.toFixed(2)}</span>
-              </li>
+                {link.label}
+              </button>
             ))}
-          </ul>
-        )}
-      </div>
-      <div className="flex gap-4 items-center">
-        <button
-          className="flex items-center text-[#3fbb38] focus:outline-none relative"
-          type="button"
-          aria-label="Ver carrito"
-          onClick={() => {
-            if (items.length > 0) setDrawerOpen(true);
-          }}
+          </div>
+          <button
+            className="flex items-center text-primary focus:outline-none relative"
+            type="button"
+            aria-label="Ver carrito"
+            onClick={() => {
+              if (items.length > 0) setDrawerOpen(true);
+            }}
+          >
+            <ShoppingBag className="w-8 h-8 text-primary" />
+            {items.length > 0 && (
+              <span className="absolute top-0 right-0 bg-green-500 text-white rounded-full px-1 text-xs">{items.length}</span>
+            )}
+          </button>
+        </div>
+        {/* Desktop nav links */}
+
+
+
+        {/* Drawer de navegación móvil */}
+        <Drawer
+          open={isNavDrawerOpen}
+          onClose={() => setNavDrawerOpen(false)}
+          direction="left"
+          size={240}
+          className="p-0 md:hidden"
         >
-          <ShoppingBag className="w-8 h-8 text-primary" />
-          {items.length > 0 && (
-            <span className="absolute top-0 right-0 bg-green-500 text-white rounded-full px-1 text-xs">{items.length}</span>
-          )}
-        </button>
-      </div>
+          <nav className="flex flex-col h-full bg-white pt-4">
+            <div className="flex justify-between items-center pl-4">
+              <div>
+                <span className="font-bold text-2xl text-primary">VitaLight</span>
+              </div>
+
+              <button
+                className="self-end mr-4 mb-4 text-gray-500 hover:text-primary text-2xl"
+                onClick={() => setNavDrawerOpen(false)}
+                aria-label="Cerrar menú de navegación"
+              >
+                <X className="w-7 h-7 text-primary" />
+              </button>
+            </div>
+            {NAV_LINKS.map((link) => (
+              <button
+                key={link.label}
+                className="px-6 py-3 text-left text-primary text-lg font-semibold hover:bg-[#eaf8e5] focus:outline-none"
+                onClick={() => {
+                  setNavDrawerOpen(false);
+                  navigate(link.path);
+                }}
+                aria-label={link.label}
+              >
+                {link.label}
+              </button>
+            ))}
+          </nav>
+        </Drawer>
+      </header>
       <Drawer
         open={isDrawerOpen}
         onClose={() => setDrawerOpen(false)}
@@ -117,7 +145,7 @@ const Header: React.FC = () => {
                     <div className="flex items-center gap-2 mt-2">
                       <div className="flex items-center bg-gray-100 rounded-lg border border-gray-300 px-1">
                         <button
-                          className="w-7 h-7 flex items-center justify-center text-gray-500 hover:text-[#3fbb38] disabled:opacity-40"
+                          className="w-7 h-7 flex items-center justify-center text-gray-500 hover:text-primary disabled:opacity-40"
                           aria-label={`Disminuir cantidad de ${item.name}`}
                           onClick={() => {
                             if (item.quantity > 1) {
@@ -131,7 +159,7 @@ const Header: React.FC = () => {
                         </button>
                         <span className="">{item.quantity}</span>
                         <button
-                          className="w-7 h-7 flex items-center justify-center text-gray-500 hover:text-[#3fbb38]"
+                          className="w-7 h-7 flex items-center justify-center text-gray-500 hover:text-primary"
                           aria-label={`Aumentar cantidad de ${item.name}`}
                           onClick={() => useCartStore.getState().updateQuantity(item.id, item.quantity + 1)}
                           tabIndex={0}
@@ -174,7 +202,7 @@ const Header: React.FC = () => {
           </div>
         </div>
       </Drawer>
-    </header>
+    </>
   );
 };
 
