@@ -12,32 +12,32 @@ const Features: React.FC = () => (
     </div>
     <div className="relative z-10 flex flex-wrap justify-center gap-6 w-full">
       <div
-        className="bg-primary rounded-lg p-8 w-full md:w-[340px] flex flex-col items-center text-center shadow-md"
+        className="bg-white/50 rounded-lg p-8 w-full md:w-[340px] flex flex-col items-center text-center shadow-md"
         data-aos="fade-right"
         data-aos-delay="200"
         data-aos-duration="500"
       >
-        <div className="border-2 border-[#3fbb38] text-[#3fbb38] rounded-full w-14 h-14 flex items-center justify-center text-3xl mb-4">🍏</div>
+        <div className="border-2 rounded-full w-14 h-14 flex items-center justify-center text-3xl mb-4">🍏</div>
         <p className="font-ligth text-black text-xl mb-2">Productos 100% Naturales</p>
         <p className="text-sm text-[#253d4e] ">"Ofrecemos alimentos orgánicos cultivados sin pesticidas ni químicos dañinos. Priorizamos tu salud y el cuidado del medio ambiente."</p>
       </div>
       <div 
-        className="bg-[#fad7dc] rounded-lg p-8 w-full md:w-[340px] flex flex-col items-center text-center shadow-md"
+        className="bg-[#fad7dc]/50 rounded-lg p-8 w-full md:w-[340px] flex flex-col items-center text-center shadow-md"
         data-aos="fade-up"
         data-aos-delay="200"
         data-aos-duration="500"
       >
-        <div className="border-2 border-[#3fbb38] text-[#3fbb38] rounded-full w-14 h-14 flex items-center justify-center text-3xl mb-4">📦</div>
+        <div className="border-2 rounded-full w-14 h-14 flex items-center justify-center text-3xl mb-4">📦</div>
         <p className="font-ligth text-black text-xl mb-2">Energía Fitness</p>
         <p className="text-sm text-[#253d4e] ">"Complementos nutricionales que potencian tu rendimiento físico y aceleran tu recuperación. Elaborados con ingredientes de la más alta calidad."</p>
       </div>
       <div 
-        className="bg-[#f8e2da] rounded-lg p-8 w-full md:w-[340px] flex flex-col items-center text-center shadow-md"
+        className="bg-[#f8e2da]/50 rounded-lg p-8 w-full md:w-[340px] flex flex-col items-center text-center shadow-md"
         data-aos="fade-left"
         data-aos-delay="200"
         data-aos-duration="500"
       >
-        <div className="border-2 border-[#3fbb38] text-[#3fbb38] rounded-full w-14 h-14 flex items-center justify-center text-3xl mb-4">🚚</div>
+        <div className="border-2 rounded-full w-14 h-14 flex items-center justify-center text-3xl mb-4">🚚</div>
         <p className="font-ligth text-black text-xl mb-2">Envíos a todo el Perú</p>
         <p className="text-sm text-[#253d4e] ">"Entregamos nuestros productos a cualquier rincón del país. Rápido, seguro y con seguimiento en tiempo real desde tu pedido hasta tu puerta."</p>
       </div>

@@ -6,7 +6,6 @@ const Footer: React.FC = () => (
       {/* Logo y nombre */}
       <div className="flex items-center gap-2 mb-4 md:mb-0">
         <span className="font-bold text-2xl text-green-700">VitaLight</span>
-        <span className="text-xs bg-white text-green-700 rounded px-2 py-1 ml-2 tracking-wide">pastel foods</span>
       </div>
       {/* Enlaces rápidos */}
       <nav className="flex gap-6 text-sm font-medium">
