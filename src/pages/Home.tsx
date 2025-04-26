@@ -1,12 +1,11 @@
 import React from "react";
-import TopBar from "../components/TopBar";
-import Header from "../components/Header";
-import NavBar from "../components/NavBar";
-import MainBanner from "../components/MainBanner";
 import CategoryHighlights from "../components/CategoryHighlights";
 import Features from "../components/Features";
-import ProductTabs from "../components/ProductTabs";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
+import MainBanner from "../components/MainBanner";
+import NavBar from "../components/NavBar";
+import ProductTabs from "../components/ProductTabs";
 
 const Home: React.FC = () => (
   <>
