@@ -53,7 +53,7 @@ const Header: React.FC = () => {
             {NAV_LINKS.map((link) => (
               <button
                 key={link.label}
-                className="flex items-center text-primary focus:outline-none relative btn btn-link"
+                className="flex items-center text-[#253d4e] focus:outline-none relative btn btn-link"
                 type="button"
                 aria-label={link.label}
                 onClick={() => navigate(link.path)}

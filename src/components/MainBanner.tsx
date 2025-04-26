@@ -11,7 +11,7 @@ const SLIDE_IMAGES = [
 ];
 
 const MainBanner: React.FC = () => (
-  <section className="w-screen h-screen relative flex items-center justify-center overflow-hidden" data-aos="fade-up">
+  <section className=" h-screen relative flex items-center justify-center overflow-hidden" data-aos="fade-up">
     {/* Slider como fondo absoluto */}
     <div className="absolute inset-0 w-full h-full z-0">
       <Slide
