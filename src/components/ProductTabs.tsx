@@ -33,7 +33,7 @@ const ProductTabs: React.FC = () => {
         {isLoading ? (
           <div className="col-span-full text-center text-lg">Cargando productos...</div>
         ) : error ? (
-          <div className="col-span-full text-center text-red-500">Error: {error}</div>
+          <div className="col-span-full text-center text-primary">Error: {error}</div>
         ) : filteredProducts.length === 0 ? (
           <div className="col-span-full text-center text-[#253d4e] text-lg">No hay productos en esta categoría.</div>
         ) : (
@@ -41,9 +41,9 @@ const ProductTabs: React.FC = () => {
             <div key={product.id} className="bg-white rounded-lg shadow p-4 flex flex-col items-center" data-aos="fade-up">
               <img src={product.image} alt={product.name} className="w-32 h-32 object-cover rounded mb-4" />
               <span className="font-bold text-[#253d4e] text-center">{product.name}</span>
-              <span className="text-green-600 font-medium text-sm mb-2">${product.price.toFixed(2)}</span>
+              <span className="text-primary font-medium text-sm mb-2">${product.price.toFixed(2)}</span>
               <button
-                className="bg-[#3fbb38] text-white px-4 py-2 rounded-full font-semibold mt-2 hover:bg-[#34a32f] transition-colors"
+                className="bg-primary text-white px-4 py-2 rounded-full font-semibold mt-2 hover:bg-primary/90 transition-colors"
                 onClick={() => { addToCart(product); toast.success('Producto agregado al carrito'); }}
                 aria-label={`Agregar ${product.name} al carrito`}
               >

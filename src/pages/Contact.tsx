@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
             </div>
             <button
               type="submit"
-              className="bg-[#3fbb38] text-white font-semibold rounded-lg py-2 px-6 mt-2 hover:bg-[#34a32f] transition-colors focus:outline-none focus:ring-2 focus:ring-[#3fbb38]"
+              className="bg-primary text-white font-semibold rounded-lg py-2 px-6 mt-2 hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-[#3fbb38]"
               disabled={!name || !email || !message}
               aria-disabled={!name || !email || !message}
             >

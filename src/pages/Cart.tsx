@@ -6,7 +6,11 @@ import { useCartStore } from "../stores/cart";
 import { formatWhatsappOrder } from "../utils/whatsapp";
 
 const Cart: React.FC = () => {
-  const { items, total, removeFromCart, updateQuantity, clearCart } = useCartStore();
+  const { items, removeFromCart, updateQuantity, clearCart } = useCartStore();
+  const total = items.reduce(
+    (sum, item) => sum + (Number(item.price) || 0) * (Number(item.quantity) || 1),
+    0
+  );
   const navigate = useNavigate();
 
 

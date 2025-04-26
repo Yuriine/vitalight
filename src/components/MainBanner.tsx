@@ -11,7 +11,7 @@ const SLIDE_IMAGES = [
 ];
 
 const MainBanner: React.FC = () => (
-  <section className="w-full h-[340px] sm:h-[400px] md:h-[480px] bg-green-700 flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-8 md:py-10 relative overflow-hidden" data-aos="fade-up">
+  <section className="w-full h-[340px] sm:h-[400px] md:h-[480px] bg-primary flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-8 md:py-10 relative overflow-hidden" data-aos="fade-up">
     <div className="flex flex-col justify-center z-10 text-white max-w-full md:max-w-[400px] mb-6 md:mb-0">
       <span className="uppercase mb-2 text-sm font-semibold">Naturalmente saludable</span>
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Nutre tu vida, potencia tu energía</h1>

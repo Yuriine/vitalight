@@ -20,7 +20,11 @@ const Header: React.FC = () => {
     };
   }, [isDrawerOpen]);
 
-  const { items, total } = useCartStore();
+  const { items } = useCartStore();
+  const total = items.reduce(
+    (sum, item) => sum + (Number(item.price) || 0) * (Number(item.quantity) || 1),
+    0
+  );
   const navigate = useNavigate();
   const { products } = useProductsStore();
   const [search, setSearch] = useState("");
