@@ -4,14 +4,14 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 const SLIDE_IMAGES = [
-  "https://images.unsplash.com/photo-1492552181161-62217fc3076d?q=80&w=1497&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Mantequilla de maní
-  "https://images.unsplash.com/photo-1624454002302-36b824d7bd0a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Granola
-  "https://images.unsplash.com/photo-1492552181161-62217fc3076d?q=80&w=1497&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Aceite de oliva
-  "https://images.unsplash.com/photo-1624454002302-36b824d7bd0a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Vinagre
+  "https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Mantequilla de maní
+  "https://images.pexels.com/photos/260405/pexels-photo-260405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Granola
+  "https://images.pexels.com/photos/1611560/pexels-photo-1611560.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Aceite de oliva
+  "https://images.pexels.com/photos/2555637/pexels-photo-2555637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Vinagre
 ];
 
 const MainBanner: React.FC = () => (
-  <section className="w-full h-[340px] sm:h-[400px] md:h-[480px] relative flex items-center justify-center overflow-hidden" data-aos="fade-up">
+  <section className="w-screen h-screen relative flex items-center justify-center overflow-hidden" data-aos="fade-up">
     {/* Slider como fondo absoluto */}
     <div className="absolute inset-0 w-full h-full z-0">
       <Slide
@@ -29,6 +29,7 @@ const MainBanner: React.FC = () => (
               alt={`slide-${idx}`}
               className="w-full h-full object-cover"
               loading="lazy"
+              style={{ minHeight: '100vh', minWidth: '100vw' }}
             />
           </div>
         ))}
