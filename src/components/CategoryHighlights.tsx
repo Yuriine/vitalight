@@ -91,11 +91,15 @@ const CATEGORY_CARDS = [
 ];
 
 const CategoryHighlights: React.FC = () => (
-  <section id="categorias" className="flex w-full items-center my-8 md:my-24 justify-center p-1 sm:p-2 md:p-3"
+  <section id="categorias" className="flex flex-col w-full items-center my-8 md:my-24 justify-center p-1 sm:p-2 md:p-3"
     data-aos="fade-up"
     data-aos-delay="200"
     data-aos-duration="500"
   >
+    <div className="mb-10">
+      <h2 className="text-5xl md:text-4xl text-center font-bold text-primary leading-tight">Nuestras Categorías</h2>
+      <span className="text-[#939393] ">Explora nuestras categorías para encontrar los productos que más te gustan.</span>
+    </div>
     <div className="grid w-full max-w-5xl gap-3 sm:gap-4 md:gap-6 grid-cols-2 sm:grid-cols-4 grid-rows-8 sm:grid-rows-3 auto-rows-[90px] sm:auto-rows-[100px]">
       {CATEGORY_CARDS.map((cat, idx) => (
         <CategoryCard
