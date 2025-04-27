@@ -33,7 +33,7 @@ const Features: React.FC = () => (
       </div>
       <div 
         className="bg-[#f8e2da]/50 rounded-lg p-8 w-full md:w-[340px] flex flex-col items-center text-center shadow-md"
-        data-aos="fade-left"
+        data-aos="fade-down"
         data-aos-delay="200"
         data-aos-duration="500"
       >
