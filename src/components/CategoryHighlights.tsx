@@ -97,8 +97,8 @@ const CategoryHighlights: React.FC = () => (
     data-aos-duration="500"
   >
     <div className="mb-10">
-      <h2 className="text-5xl md:text-4xl text-center font-bold text-primary leading-tight">Nuestras Categorías</h2>
-      <span className="text-[#939393] ">Explora nuestras categorías para encontrar los productos que más te gustan.</span>
+      <h2 className="text-2xl md:text-5xl text-center font-bold text-primary leading-tight mb-2">Nuestras Categorías</h2>
+      <p className="text-[#939393] text-center text-lg">Explora nuestras categorías para encontrar los productos que más te gustan.</p>
     </div>
     <div className="grid w-full max-w-5xl gap-3 sm:gap-4 md:gap-6 grid-cols-2 sm:grid-cols-4 grid-rows-8 sm:grid-rows-3 auto-rows-[90px] sm:auto-rows-[100px]">
       {CATEGORY_CARDS.map((cat, idx) => (
