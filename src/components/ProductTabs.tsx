@@ -17,7 +17,7 @@ const ProductTabs: React.FC = () => {
     : products;
 
   return (
-    <section className="w-full py-12 px-4 flex flex-col items-center bg-white pt-40">
+    <section id="productos" className="w-full py-12 px-4 flex flex-col items-center bg-white pt-40">
       <div className="mb-8">
         <h2 className="text-2xl md:text-5xl font-bold text-primary text-center mb-2">Nuestros Productos</h2>
         <p className="text-[#939393] text-center text-lg max-w-xl">Naturalmente saludable, para tu mejor versión</p>

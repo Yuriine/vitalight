@@ -2,7 +2,7 @@ import type React from 'react';
 import Logo from "../assets/logo.png";
 
 const Footer: React.FC = () => (
-  <footer className="w-full bg-mint-pastel text-[#253d4e] py-10 px-4  border-mint-pastel mt-10">
+  <footer id="contacto" className="w-full bg-mint-pastel text-[#253d4e] py-10 px-4  border-mint-pastel mt-10">
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
       <div className="flex items-center gap-2 mb-4 md:mb-0">
         <img src={Logo} alt="Logo" className="w-14 h-14 md:w-20 md:h-20" />
@@ -15,13 +15,13 @@ const Footer: React.FC = () => (
       </nav>
       <div className="flex gap-4 text-green-700">
         <a href="#" aria-label="Facebook" className="hover:text-green-900">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h5v-7H9v-3h3v-2c0-2.24 1.34-3.5 3.4-3.5.7 0 1.6.07 2.1.14v2.36h-1.3c-.81 0-1 .25-1 1V12h3l-.5 3h-2.5v7h2a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5Z"/></svg>
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h5v-7H9v-3h3v-2c0-2.24 1.34-3.5 3.4-3.5.7 0 1.6.07 2.1.14v2.36h-1.3c-.81 0-1 .25-1 1V12h3l-.5 3h-2.5v7h2a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5Z" /></svg>
         </a>
         <a href="#" aria-label="Twitter" className="hover:text-green-900">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M24 4.56a9.94 9.94 0 0 1-2.83.78A4.93 4.93 0 0 0 23.34 3c-.94.56-1.98.97-3.08 1.2a4.92 4.92 0 0 0-8.39 4.48A13.97 13.97 0 0 1 1.67 3.15a4.92 4.92 0 0 0 1.52 6.57 4.94 4.94 0 0 1-2.23-.61c0 2.15 1.53 3.95 3.7 4.37A4.93 4.93 0 0 1 .96 16.8 9.87 9.87 0 0 0 7.29 18.7c6 0 9.32-5.01 9.32-9.34 0-.14 0-.29-.01-.43A6.88 6.88 0 0 0 24 4.56Z"/></svg>
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M24 4.56a9.94 9.94 0 0 1-2.83.78A4.93 4.93 0 0 0 23.34 3c-.94.56-1.98.97-3.08 1.2a4.92 4.92 0 0 0-8.39 4.48A13.97 13.97 0 0 1 1.67 3.15a4.92 4.92 0 0 0 1.52 6.57 4.94 4.94 0 0 1-2.23-.61c0 2.15 1.53 3.95 3.7 4.37A4.93 4.93 0 0 1 .96 16.8 9.87 9.87 0 0 0 7.29 18.7c6 0 9.32-5.01 9.32-9.34 0-.14 0-.29-.01-.43A6.88 6.88 0 0 0 24 4.56Z" /></svg>
         </a>
         <a href="#" aria-label="LinkedIn" className="hover:text-green-900">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.6 20h-3v-8h3v8zm-1.5-9a1.73 1.73 0 1 1 0-3.47 1.73 1.73 0 0 1 0 3.47zm15.1 9h-3v-4.5c0-1.08-.02-2.47-1.5-2.47s-1.73 1.17-1.73 2.39v4.58h-3v-8h2.88v1.09h.04c.4-.76 1.37-1.56 2.82-1.56 3.01 0 3.57 1.98 3.57 4.56v4.91z"/></svg>
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.6 20h-3v-8h3v8zm-1.5-9a1.73 1.73 0 1 1 0-3.47 1.73 1.73 0 0 1 0 3.47zm15.1 9h-3v-4.5c0-1.08-.02-2.47-1.5-2.47s-1.73 1.17-1.73 2.39v4.58h-3v-8h2.88v1.09h.04c.4-.76 1.37-1.56 2.82-1.56 3.01 0 3.57 1.98 3.57 4.56v4.91z" /></svg>
         </a>
       </div>
     </div>

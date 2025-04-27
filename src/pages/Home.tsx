@@ -4,12 +4,10 @@ import Features from "../components/Features";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import MainBanner from "../components/MainBanner";
-import NavBar from "../components/NavBar";
 import ProductTabs from "../components/ProductTabs";
 
 const Home: React.FC = () => (
   <>
-    {/* <TopBar /> */}
     <Header />
     <MainBanner />
     <CategoryHighlights />

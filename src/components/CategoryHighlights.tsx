@@ -91,7 +91,7 @@ const CATEGORY_CARDS = [
 ];
 
 const CategoryHighlights: React.FC = () => (
-  <div className="flex w-full items-center my-8 md:my-24 justify-center p-1 sm:p-2 md:p-3">
+  <section id="categorias" className="flex w-full items-center my-8 md:my-24 justify-center p-1 sm:p-2 md:p-3">
     <div className="grid w-full max-w-5xl gap-3 sm:gap-4 md:gap-6 grid-cols-2 sm:grid-cols-4 grid-rows-8 sm:grid-rows-3 auto-rows-[90px] sm:auto-rows-[100px]">
       {CATEGORY_CARDS.map((cat, idx) => (
         <CategoryCard
@@ -103,7 +103,7 @@ const CategoryHighlights: React.FC = () => (
         />
       ))}
     </div>
-  </div>
+  </section>
 );
 
 export default CategoryHighlights;

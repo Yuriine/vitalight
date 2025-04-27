@@ -1,16 +1,17 @@
-import { Minus, Plus, ShoppingBag, Trash, Menu, X, TrashIcon } from "lucide-react";
+import { Menu, ShoppingBag, TrashIcon, X } from "lucide-react";
 import React, { useState } from "react";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import { useNavigate } from "react-router";
-import { useCartStore } from "../stores/cart";
 import Logo from "../assets/logo.png";
+import { useCartStore } from "../stores/cart";
 
 const NAV_LINKS = [
-  { label: "Inicio", path: "/" },
-  { label: "Productos", path: "/products" },
-  { label: "Acerca de", path: "/about" },
-  { label: "Contacto", path: "/contact" },
+  { label: "Inicio", id: "inicio" },
+  { label: "Productos", id: "productos" },
+  { label: "Acerca de", id: "acerca" },
+  { label: "Categorías", id: "categorias" },
+  { label: "Contacto", id: "contacto" },
 ];
 
 
@@ -29,6 +30,13 @@ const Header: React.FC = () => {
   }, [isDrawerOpen]);
 
   const { items, removeFromCart } = useCartStore();
+  const handleNavClick = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    setNavDrawerOpen(false); // Si usas drawer, ciérralo
+  };
   const total = items.reduce(
     (sum, item) => sum + (Number(item.price) || 0) * (Number(item.quantity) || 1),
     0
@@ -56,7 +64,7 @@ const Header: React.FC = () => {
                 className="flex items-center text-[#253d4e] focus:outline-none relative btn btn-link"
                 type="button"
                 aria-label={link.label}
-                onClick={() => navigate(link.path)}
+                onClick={() => handleNavClick(link.id)}
               >
                 {link.label}
               </button>
@@ -106,7 +114,7 @@ const Header: React.FC = () => {
                 className="px-6 py-3 text-left text-primary text-lg font-semibold hover:bg-[#eaf8e5] focus:outline-none"
                 onClick={() => {
                   setNavDrawerOpen(false);
-                  navigate(link.path);
+                  handleNavClick(link.id);
                 }}
                 aria-label={link.label}
               >
