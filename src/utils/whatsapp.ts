@@ -13,19 +13,19 @@ export function formatWhatsappOrder({ name, address, items, total }: WhatsappOrd
   const productLines = items
     .map(
       (item) =>
-        `• ${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`
+        `*•* *${item.name}*  (x${item.quantity})  -  *S/. ${(item.price * item.quantity).toFixed(2)}*`
     )
     .join("%0A");
+
   const message =
     `¡Hola VitaLight!%0A%0A` +
-    `Quiero realizar un pedido:%0A` +
-    `------------------------%0A` +
-    `${productLines}%0A` +
-    `------------------------%0A` +
-    `Total: $${total.toFixed(2)}%0A%0A` +
-    `Datos de entrega:%0A` +
-    `Nombre: ${name}%0A` +
-    `Dirección: ${address}%0A` +
-    `¡Gracias! Espero su confirmación.`;
+    `Quisiera hacer un pedido con los siguientes detalles:%0A` +
+    `*UBICACIÓN:*%0A${address}%0A` +
+    `_________________________%0A` +
+    `*CLIENTE:*%0A• ${name}%0A` +
+    `*PRODUCTOS SOLICITADOS:*%0A${productLines}%0A` +
+    `_________________________%0A` +
+    `*PRECIO TOTAL:*  *S/. ${total.toFixed(2)}*%0A` +
+    `%0AEspero la confirmación. Gracias.`;
   return `https://wa.me/${phoneNumber}?text=${message}`;
 }
