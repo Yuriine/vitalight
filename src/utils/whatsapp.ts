@@ -1,8 +1,6 @@
 interface WhatsappOrderParams {
   name: string;
-  phone: string;
   address: string;
-  email: string;
   items: Array<{ name: string; quantity: number; price: number }>;
   total: number;
 }
@@ -10,7 +8,7 @@ interface WhatsappOrderParams {
 /**
  * Genera un link de WhatsApp con el mensaje de pedido para VitaLight
  */
-export function formatWhatsappOrder({ name, phone, address, email, items, total }: WhatsappOrderParams): string {
+export function formatWhatsappOrder({ name, address, items, total }: WhatsappOrderParams): string {
   const phoneNumber = "51914019629"; // Cambia por el número oficial VitaLight (sin +, incluye código país)
   const productLines = items
     .map(
@@ -27,9 +25,7 @@ export function formatWhatsappOrder({ name, phone, address, email, items, total 
     `Total: $${total.toFixed(2)}%0A%0A` +
     `Datos de entrega:%0A` +
     `Nombre: ${name}%0A` +
-    `Teléfono: ${phone}%0A` +
     `Dirección: ${address}%0A` +
-    `Email: ${email}%0A%0A` +
     `¡Gracias! Espero su confirmación.`;
   return `https://wa.me/${phoneNumber}?text=${message}`;
 }

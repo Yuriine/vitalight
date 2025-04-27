@@ -1,4 +1,4 @@
-import { Minus, Plus, ShoppingBag, Trash, Menu, X } from "lucide-react";
+import { Minus, Plus, ShoppingBag, Trash, Menu, X, TrashIcon } from "lucide-react";
 import React, { useState } from "react";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
     };
   }, [isDrawerOpen]);
 
-  const { items } = useCartStore();
+  const { items, removeFromCart } = useCartStore();
   const total = items.reduce(
     (sum, item) => sum + (Number(item.price) || 0) * (Number(item.quantity) || 1),
     0
@@ -66,9 +66,7 @@ const Header: React.FC = () => {
             className="flex items-center text-primary focus:outline-none relative"
             type="button"
             aria-label="Ver carrito"
-            onClick={() => {
-              if (items.length > 0) setDrawerOpen(true);
-            }}
+            onClick={() => setDrawerOpen(true)}
           >
             <ShoppingBag className="w-8 h-8 text-primary" />
             {items.length > 0 && (
@@ -123,12 +121,11 @@ const Header: React.FC = () => {
         onClose={() => setDrawerOpen(false)}
         direction="right"
         size={350}
-        className="p-0"
       >
         <div className="flex flex-col h-full">
           <div className="flex justify-between items-center p-4 border-b">
             <span className="text-xl font-bold text-primary">Tu Carrito</span>
-            <button onClick={() => setDrawerOpen(false)} aria-label="Cerrar carrito" className="text-gray-500 hover:text-red-500 text-2xl">×</button>
+            <button onClick={() => setDrawerOpen(false)} aria-label="Cerrar carrito" className="text-gray-500 hover:text-red-500 text-2xl"><X className="w-7 h-7 text-primary" /></button>
           </div>
           <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4">
             {items.length === 0 ? (
@@ -137,49 +134,19 @@ const Header: React.FC = () => {
               items.map(item => (
                 <div key={item.id} className="flex gap-3 border-b pb-4 pt-2 last:border-b-0 items-center">
                   <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded" />
-                  <div className="flex-1 flex flex-col justify-between min-w-0 items-center">
+                  <div className="flex-1 flex flex-col justify-between min-w-0 ">
                     <div className="flex flex-col min-w-0">
-                      <span className="font-semibold text-[15px] text-[#222] leading-tight truncate">{item.name}</span>
-                      <span>150 mll</span>
+                      <span className="font-semibold leading-tight truncate text-sm md:text-lg">{item.name}</span>
+                      <span className="text-accent text-xs md:text-sm">150 mll</span>
                     </div>
-                    <div className="flex items-center gap-2 mt-2">
-                      <div className="flex items-center bg-gray-100 rounded-lg border border-gray-300 px-1">
-                        <button
-                          className="w-7 h-7 flex items-center justify-center text-gray-500 hover:text-primary disabled:opacity-40"
-                          aria-label={`Disminuir cantidad de ${item.name}`}
-                          onClick={() => {
-                            if (item.quantity > 1) {
-                              useCartStore.getState().updateQuantity(item.id, item.quantity - 1);
-                            }
-                          }}
-                          disabled={item.quantity <= 1}
-                          tabIndex={0}
-                        >
-                          <Minus className="w-4 h-4" />
-                        </button>
-                        <span className="">{item.quantity}</span>
-                        <button
-                          className="w-7 h-7 flex items-center justify-center text-gray-500 hover:text-primary"
-                          aria-label={`Aumentar cantidad de ${item.name}`}
-                          onClick={() => useCartStore.getState().updateQuantity(item.id, item.quantity + 1)}
-                          tabIndex={0}
-                        >
-                          <Plus className="w-4 h-4" />
-                        </button>
-                      </div>
-                      <button
-                        className="btn btn-ghost btn-sm"
-                        aria-label={`Eliminar ${item.name} del carrito`}
-                        onClick={() => useCartStore.getState().removeFromCart(item.id)}
-                        tabIndex={0}
-                      >
-                        <Trash className="w-4 h-4" color="red" />
-                      </button>
-                    </div>
+                    <span className="font-bold text-lg text-[#222]">S/. {item.price.toFixed(2)}</span>
                   </div>
-                  <div className="flex flex-col items-end min-w-[70px]">
-                    <span className="font-bold text-[15px] text-[#222]">${item.price.toFixed(2)}</span>
-                  </div>
+
+                  <button className="btn btn-circle btn-error" onClick={() => removeFromCart(item.id)}>
+                    <TrashIcon className="w-4 h-4" />
+                  </button>
+
+
                 </div>
               ))
             )}
@@ -197,7 +164,7 @@ const Header: React.FC = () => {
               }}
               disabled={items.length === 0}
             >
-              Proceder con la compra
+              Ver más detalles
             </button>
           </div>
         </div>
