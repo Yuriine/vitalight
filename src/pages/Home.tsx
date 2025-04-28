@@ -11,8 +11,8 @@ const Home: React.FC = () => (
   <>
     <Header />
     <MainBanner />
-    <CategoryHighlights />
     <About />
+    <CategoryHighlights />
     <Features />
     <ProductTabs />
     <Footer />

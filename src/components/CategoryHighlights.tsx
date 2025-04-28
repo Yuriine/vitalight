@@ -91,7 +91,7 @@ const CATEGORY_CARDS = [
 ];
 
 const CategoryHighlights: React.FC = () => (
-  <section id="categorias" className="flex flex-col w-full items-center my-8 md:my-24 justify-center p-1 sm:p-2 md:p-3"
+  <section id="categorias" className="flex flex-col w-full items-center md:py-28 justify-center p-1 sm:p-2 md:p-3"
     data-aos="fade-up"
     data-aos-delay="200"
     data-aos-duration="500"
