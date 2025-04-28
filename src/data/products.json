@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Aceite de Coco Orgánico",
+      "price": 120,
+      "description": "Aceite de coco prensado en frío, 100% natural. Ideal para cocinar o uso cosmético.",
+      "category": "Superfoods",
+      "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Proteína Vegana de Chía",
+      "price": 180,
+      "description": "Mezcla de proteína vegetal con chía, sin azúcar añadida.",
+      "category": "Proteínas",
+      "image": "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 3,
+      "name": "Barra Energética de Almendra",
+      "price": 35,
+      "description": "Barra energética con almendras y miel natural.",
+      "category": "Snacks",
+      "image": "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Mix de Semillas Antioxidante",
+      "price": 90,
+      "description": "Mix de semillas de girasol, calabaza y chía.",
+      "category": "Superfoods",
+      "image": "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 5,
+      "name": "Mantequilla de Maní Natural",
+      "price": 75,
+      "description": "Mantequilla de maní sin azúcar ni aceites añadidos.",
+      "category": "Untables",
+      "image": "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 6,
+      "name": "Granola Artesanal",
+      "price": 65,
+      "description": "Granola con frutos secos y miel de agave.",
+      "category": "Snacks",
+      "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 7,
+      "name": "Té Verde Matcha Premium",
+      "price": 150,
+      "description": "Matcha japonés de alta pureza, ideal para bebidas y postres.",
+      "category": "Bebidas",
+      "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 8,
+      "name": "Cacao Orgánico en Polvo",
+      "price": 110,
+      "description": "Cacao puro, sin azúcares añadidos, ideal para repostería.",
+      "category": "Superfoods",
+      "image": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b43?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 9,
+      "name": "Agua de Coco Natural",
+      "price": 40,
+      "description": "Agua de coco fresca, sin conservadores.",
+      "category": "Bebidas",
+      "image": "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 10,
+      "name": "Pan de Masa Madre Integral",
+      "price": 55,
+      "description": "Pan artesanal de masa madre, alto en fibra.",
+      "category": "Panadería",
+      "image": "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80"
+    }
+  ]
+}

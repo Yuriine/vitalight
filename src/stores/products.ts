@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
-import productsData from "../data/db.json";
+import productsData from "../data/products.json";
 
 export interface Product {
   id: number;
@@ -8,6 +8,7 @@ export interface Product {
   price: number;
   description?: string;
   category: string;
+  image: string;
 }
 
 interface ProductsState {

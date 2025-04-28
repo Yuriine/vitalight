@@ -30,43 +30,43 @@ const Header: React.FC = () => {
   }, [isDrawerOpen]);
 
   const { items, removeFromCart } = useCartStore();
-  
+
   //**Esta función agrega la animación de scrool */
   const handleNavClick = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
       // Cerrar el drawer si está abierto
       setNavDrawerOpen(false);
-      
-      const headerOffset = 80; 
+
+      const headerOffset = 80;
       const sectionPosition = section.getBoundingClientRect().top;
       const offsetPosition = sectionPosition + window.pageYOffset - headerOffset;
       const startPosition = window.pageYOffset;
       const distance = offsetPosition - startPosition;
-      
-      const duration = 800; 
+
+      const duration = 800;
       let start: number | null = null;
-      
+
       const animateScroll = (timestamp: number) => {
         if (!start) start = timestamp;
         const progress = timestamp - start;
         const percentage = Math.min(progress / duration, 1);
-        
+
         const easing = (t: number) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-        
+
         const position = startPosition + distance * easing(percentage);
-        
+
         window.scrollTo(0, position);
-        
+
         if (progress < duration) {
           requestAnimationFrame(animateScroll);
         }
       };
-      
+
       requestAnimationFrame(animateScroll);
     }
   };
-  
+
   const total = items.reduce(
     (sum, item) => sum + (Number(item.price) || 0) * (Number(item.quantity) || 1),
     0
