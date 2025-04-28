@@ -1,12 +1,11 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
-import { supabase } from "../utils/supabase";
+import productsData from "../data/db.json";
 
 export interface Product {
   id: number;
   name: string;
   price: number;
-  image: string;
   description?: string;
   category: string;
 }
@@ -29,17 +28,23 @@ export const useProductsStore = create<ProductsState>()(
     activeCategory: null,
     setActiveCategory: (category: string | null) => set({ activeCategory: category }),
     getProductsByCategoryName: (category: string) => {
-      // Aquí se asume que cada producto tiene un campo 'category' (ajustar si es diferente)
       return get().products.filter((p) => p.category?.toLowerCase() === category.toLowerCase());
     },
     fetchProducts: async () => {
-      set({ isLoading: true, error: null });
-      const { data, error } = await supabase.from("products").select("*");
-      if (error) {
-        set({ error: error.message, isLoading: false });
-        return;
+      try {
+        set({ isLoading: true, error: null });
+        setTimeout(() => {
+          set({ 
+            products: productsData.products, 
+            isLoading: false 
+          });
+        }, 300);
+      } catch (error) {
+        set({ 
+          error: "Error al cargar los productos", 
+          isLoading: false 
+        });
       }
-      set({ products: data || [], isLoading: false });
     },
   }))
 );
