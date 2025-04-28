@@ -15,9 +15,19 @@ interface CartState {
   total: number;
 }
 
+const getInitialCartItems = (): CartItem[] => {
+  if (typeof window === "undefined") return [];
+  try {
+    const stored = localStorage.getItem("cartItems");
+    return stored ? JSON.parse(stored) : [];
+  } catch {
+    return [];
+  }
+};
+
 export const useCartStore = create<CartState>()(
   devtools((set, get) => ({
-    items: [],
+    items: getInitialCartItems(),
     addToCart: (product, quantity = 1) => {
       set((state) => {
         const existing = state.items.find((item) => item.id === product.id);
@@ -65,3 +75,12 @@ export const useCartStore = create<CartState>()(
     }
   }))
 );
+
+// Persistencia en localStorage
+if (typeof window !== "undefined") {
+  useCartStore.subscribe((state) => {
+    try {
+      localStorage.setItem("cartItems", JSON.stringify(state.items));
+    } catch {}
+  });
+}
