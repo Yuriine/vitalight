@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# Tienda de Productos Naturales
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web moderno y responsive para una tienda de productos naturales, ideal para mostrar un catálogo atractivo y permitir que los usuarios realicen pedidos fácilmente.
 
-Currently, two official plugins are available:
+## Tecnologías utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** – Framework principal para la creación del frontend.
+- **Tailwind CSS** – Estilizado rápido y eficiente con clases utilitarias.
+- **DaisyUI** – Componentes UI ya diseñados sobre Tailwind (inputs, botones, cards).
+- **AOS (Animate On Scroll)** – Librería para animaciones suaves al hacer scroll.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Vista limpia y amigable para mostrar productos naturales.
+- Inputs personalizables para formularios de pedido.
+- Estilo visual fijo (modo claro) para mantener coherencia en la marca.
+- Diseño responsive adaptado a celulares y tablets.
+- Animaciones de entrada con AOS para una experiencia más dinámica.
 
-- Configure the top-level `parserOptions` property like this:
+## Capturas de pantalla
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+![vitalightportada1](https://i.imgpost.net/2025/04/28/351D.png)
+![vitalightportada2](https://i.imgpost.net/2025/04/28/35cR.png)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Información de contacto
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+¿Estás interesado en hacer un proyecto similar para tu negocio?
+
+**Celular/WhatsApp:** [937 760 953](https://wa.me/51937760953)  
+**Ubicación:** Lima, Perú  
+Desarrollado por **Grobles Tech Solutions**
+
+---
+
+¡Gracias por visitar el proyecto!
+
