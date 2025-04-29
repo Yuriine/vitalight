@@ -171,10 +171,10 @@ const Header: React.FC = () => {
             ) : (
               items.map(item => (
                 <div key={item.id} className="flex gap-3 border-b pb-4 pt-2 last:border-b-0 items-center">
-                  <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded" />
+                  <img src="https://laticamp.com/wp-content/uploads/2024/02/tofdos-los-sabores-sin-fondo-1.1-300x300.png" alt={item.name} className="w-20 h-20 object-cover rounded" />
                   <div className="flex-1 flex flex-col justify-between min-w-0 ">
                     <div className="flex flex-col min-w-0">
-                      <span className="font-semibold leading-tight truncate text-sm md:text-lg">{item.name}</span>
+                      <span className="font-semibold leading-tight truncate text-sm md:text-lg text-[#222]">{item.name}</span>
                       <span className="text-accent text-xs md:text-sm">150 mll</span>
                     </div>
                     <span className="font-bold text-lg text-[#222]">S/. {item.price.toFixed(2)}</span>
@@ -191,11 +191,11 @@ const Header: React.FC = () => {
           </div>
           <div className="p-4 border-t flex flex-col gap-3">
             <div className="flex justify-between items-center">
-              <span className="font-semibold">Total</span>
-              <span className="font-bold text-lg ">S/. {total.toFixed(2)}</span>
+              <span className="font-semibold text-[#222]">Total</span>
+              <span className="font-bold text-lg text-[#222]">S/. {total.toFixed(2)}</span>
             </div>
             <button
-              className="btn btn-success rounded-lg"
+              className="bg-primary py-2 rounded-lg text-[#222]"
               onClick={() => {
                 setDrawerOpen(false);
                 navigate("/cart");
