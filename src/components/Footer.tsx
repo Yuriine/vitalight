@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
         <div className="flex items-center gap-2 mb-4 md:mb-0">
           <img src={Logo} alt="Logo" className="w-14 h-14 md:w-20 md:h-20" />
         </div>
-        <nav className="flex gap-6 text-sm font-medium">
+        <nav className="flex gap-6 text-sm font-medium flex-col md:flex-row">
           <button onClick={() => handleNavClick('inicio')} className="hover:text-primary">Inicio</button>
           <button onClick={() => handleNavClick('acerca')} className="hover:text-primary">Acerca de</button>
           <button onClick={() => handleNavClick('productos')} className="hover:text-primary">Productos</button>
