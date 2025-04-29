@@ -39,11 +39,10 @@ const Cart: React.FC = () => {
     <>
 
       <div
-        style={{ backgroundImage: `url("${Background}")` }}
         className="min-h-screen py-10 bg-cover  bg-no-repeat bg-center relative bg-primary"
       >
         <button
-          className="btn bg-primary rounded-lg mx-4"
+          className="btn btn-neutral rounded-lg mx-4"
           onClick={() => navigate("/")}
           type="button"
         >
@@ -98,12 +97,12 @@ const Cart: React.FC = () => {
                       <div className="flex items-center gap-2">
                         <div className="avatar">
                           <div className="w-20 h-20 rounded-xl border border-base-300 bg-base-100 md:w-24 md:h-24">
-                            <img src="https://laticamp.com/wp-content/uploads/2024/02/tofdos-los-sabores-sin-fondo-1.1-300x300.png"  alt={item.name} className="object-cover" />
+                            <img src="https://laticamp.com/wp-content/uploads/2024/02/tofdos-los-sabores-sin-fondo-1.1-300x300.png" alt={item.name} className="object-cover" />
                           </div>
                         </div>
                         <div className="flex-1 flex flex-col justify-between md:gap-2 min-w-0">
                           <span className="font-bold text-lg truncate">{item.name}</span>
-                          <span className="text-accent text-xs md:text-sm">150 mll</span>
+                          <span className="text-accent text-xs md:text-sm">{item.presentation}</span>
                           <div className="flex items-center mt-1 gap-4 justify-between md:justify-start">
                             <span className="badge badge-success badge-soft badge-lg text-base">x{item.quantity}<span className="hidden md:block">unidades</span></span>
                             <span className="font-bold text-base">S/. {(item.price * item.quantity).toFixed(2)}</span>

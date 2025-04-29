@@ -1,13 +1,14 @@
-import { createRoot } from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router";
-import "./index.css";
-import Home from "./pages/Home.tsx";
-import ProductDetail from "./pages/ProductDetail.tsx";
-import Cart from "./pages/Cart.tsx";
-import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import React, { useEffect } from "react";
+import { createRoot } from "react-dom/client";
 import { Toaster } from "react-hot-toast";
+import { BrowserRouter, Route, Routes } from "react-router";
+import "./index.css";
+import Cart from "./pages/Cart.tsx";
+import Home from "./pages/Home.tsx";
+import Products from "./pages/Products.tsx";
+import Layout from "./pages/Layout.tsx";
 
 const AppWithAOS: React.FC = () => {
   useEffect(() => {
@@ -16,8 +17,10 @@ const AppWithAOS: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="products/:productId" element={<ProductDetail />} />
+        <Route element={<Layout />}>
+          <Route path="productos" element={<Products />} />
+          <Route index element={<Home />} />
+        </Route>
         <Route path="cart" element={<Cart />} />
       </Routes>
       <Toaster />

@@ -7,7 +7,7 @@ import { scrollToSection } from "../utils/scrollAnimation";
 
 const NAV_LINKS = [
   { label: "Inicio", id: "inicio" },
-  { label: "Productos", id: "productos" },
+  { label: "Productos", id: "/productos" },
   { label: "Acerca de", id: "acerca" },
   { label: "Categorías", id: "categorias" },
   { label: "Contacto", id: "contacto" },
@@ -75,15 +75,15 @@ const Header: React.FC = () => {
 
             <div className="hidden md:flex gap-4 items-center">
               {NAV_LINKS.map((link) => (
-                <button
+                <a
                   key={link.label}
-                  className="flex items-center text-[#253d4e] focus:outline-none hover:text-primary relative btn btn-link"
+                  className=" btn btn-neutral btn-ghost"
                   type="button"
                   aria-label={link.label}
-                  onClick={() => handleNavClick(link.id)}
+                  href={link.id.startsWith('/') ? link.id : `/#${link.id}`}
                 >
                   {link.label}
-                </button>
+                </a>
               ))}
             </div>
             <button
@@ -138,7 +138,7 @@ const Header: React.FC = () => {
                       <div className="flex-1 flex flex-col justify-between min-w-0 ">
                         <div className="flex flex-col min-w-0">
                           <span className="font-semibold leading-tight truncate text-sm md:text-lg text-[#222]">{item.name}</span>
-                          <span className="text-accent text-xs md:text-sm">150 mll</span>
+                          <span className="text-accent text-xs md:text-sm">{item.presentation}</span>
                         </div>
                         <span className="font-bold text-lg text-[#222]">S/. {item.price.toFixed(2)}</span>
                       </div>
@@ -189,8 +189,8 @@ const Header: React.FC = () => {
             <li key={link.label}>
               <a
                 className="text-primary text-lg font-semibold hover:bg-[#eaf8e5] focus:outline-none"
-                onClick={() => handleMobileNavClick(link.id)}
                 aria-label={link.label}
+                href={link.id.startsWith('/') ? link.id : `/#${link.id}`}
               >
                 {link.label}
               </a>

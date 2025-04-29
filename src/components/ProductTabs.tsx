@@ -41,8 +41,8 @@ const ProductTabs: React.FC = () => {
     (product) =>
       product.category === activeCategory &&
       (
-        product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (product.description?.toLowerCase() ?? "").includes(searchTerm.toLowerCase())
+        product.name.toLowerCase().includes(searchTerm.toLowerCase())
+
       )
   );
 
@@ -53,7 +53,7 @@ const ProductTabs: React.FC = () => {
   };
 
   return (
-    <section id="productos" className="w-full py-28 px-4 flex flex-col items-center bg-white">
+    <section id="productos" className="w-full py-28 pt-44 px-4 flex flex-col items-center bg-white">
       <div className="mb-8">
         <h2 className="text-2xl md:text-5xl font-bold text-primary text-center mb-2">Nuestros Productos</h2>
         <p className="text-[#939393] text-center text-lg max-w-xl">Naturalmente saludable, para tu mejor versión</p>
