@@ -1,7 +1,5 @@
 import { Menu, ShoppingBag, TrashIcon, X } from "lucide-react";
 import React, { useState } from "react";
-import Drawer from "react-modern-drawer";
-import "react-modern-drawer/dist/index.css";
 import { useNavigate } from "react-router";
 import Logo from "../assets/logo.png";
 import { useCartStore } from "../stores/cart";
@@ -17,7 +15,7 @@ const NAV_LINKS = [
 
 
 const Header: React.FC = () => {
-  const [isNavDrawerOpen, setNavDrawerOpen] = useState(false);
+
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   React.useEffect(() => {
     if (isDrawerOpen) {
@@ -34,12 +32,16 @@ const Header: React.FC = () => {
 
   // Función para manejar la navegación con animación de scroll
   const handleNavClick = (id: string) => {
-    // Cerrar el drawer si está abierto
-    setNavDrawerOpen(false);
-    
-    // Usar la función de utilidad para hacer scroll
     scrollToSection(id);
   };
+
+  // Cierra el drawer móvil y navega a la sección
+  const handleMobileNavClick = (id: string) => {
+    const drawer = document.getElementById('my-drawer') as HTMLInputElement | null;
+    if (drawer) drawer.checked = false;
+    scrollToSection(id);
+  };
+
 
   const total = items.reduce(
     (sum, item) => sum + (Number(item.price) || 0) * (Number(item.quantity) || 1),
@@ -49,138 +51,145 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50 bg-white shadow flex items-center justify-between py-3 px-4 md:px-8 gap-4 md:gap-6">
-        <div className="flex justify-between w-full items-center gap-2">
-          {/* Burger menu for mobile */}
-          <button
-            className="md:hidden mr-2 p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
-            aria-label="Abrir menú de navegación"
-            onClick={() => setNavDrawerOpen(true)}
-          >
-            <Menu className="w-7 h-7 text-primary" />
-          </button>
-          <img src={Logo} alt="Logo" className="w-14 h-14 md:w-20 md:h-20 " />
-
-          <div className="hidden md:flex gap-4 items-center">
-            {NAV_LINKS.map((link) => (
-              <button
-                key={link.label}
-                className="flex items-center text-[#253d4e] focus:outline-none hover:text-primary relative btn btn-link"
-                type="button"
-                aria-label={link.label}
-                onClick={() => handleNavClick(link.id)}
+      <div className="drawer">
+        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content">
+          <header className="fixed top-0 left-0 w-full z-50 bg-white shadow flex items-center justify-between py-3 px-4 md:px-8 gap-4 md:gap-6">
+            <div className="flex justify-between w-full items-center gap-2">
+              {/* Burger menu for mobile */}
+              <label
+                htmlFor="my-drawer"
+                className="md:hidden mr-2 p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary drawer-button"
               >
-                {link.label}
-              </button>
-            ))}
-          </div>
-          <button
-            className="flex items-center text-primary focus:outline-none relative"
-            type="button"
-            aria-label="Ver carrito"
-            onClick={() => setDrawerOpen(true)}
-          >
-            <ShoppingBag className="w-8 h-8 text-primary" />
-            {items.length > 0 && (
-              <span className="absolute top-0 right-0 bg-green-500 text-white rounded-full px-1 text-xs">{items.length}</span>
-            )}
-          </button>
-        </div>
-        {/* Desktop nav links */}
+                <Menu className="w-7 h-7 text-primary" />
+              </label>
+              <img src={Logo} alt="Logo" className="w-14 h-14 md:w-20 md:h-20 " />
 
-
-
-        {/* Drawer de navegación móvil */}
-        <Drawer
-          open={isNavDrawerOpen}
-          onClose={() => setNavDrawerOpen(false)}
-          direction="left"
-          size={240}
-          className="p-0 md:hidden"
-        >
-          <nav className="flex flex-col h-full bg-white pt-4">
-            <div className="flex justify-between items-center pl-4">
-              <div>
-                <span className="font-bold text-2xl text-primary">VitaLight</span>
-              </div>
-
-              <button
-                className="self-end mr-4 mb-4 text-gray-500 hover:text-primary text-2xl"
-                onClick={() => setNavDrawerOpen(false)}
-                aria-label="Cerrar menú de navegación"
-              >
-                <X className="w-7 h-7 text-primary" />
-              </button>
-            </div>
-            {NAV_LINKS.map((link) => (
-              <button
-                key={link.label}
-                className="px-6 py-3 text-left text-primary text-lg font-semibold hover:bg-[#eaf8e5] focus:outline-none"
-                onClick={() => {
-                  setNavDrawerOpen(false);
-                  handleNavClick(link.id);
-                }}
-                aria-label={link.label}
-              >
-                {link.label}
-              </button>
-            ))}
-          </nav>
-        </Drawer>
-      </header>
-      <Drawer
-        open={isDrawerOpen}
-        onClose={() => setDrawerOpen(false)}
-        direction="right"
-        size={350}
-      >
-        <div className="flex flex-col h-full">
-          <div className="flex justify-between items-center p-4 border-b">
-            <span className="text-xl font-bold text-primary">Tu Carrito</span>
-            <button onClick={() => setDrawerOpen(false)} aria-label="Cerrar carrito" className="text-gray-500 hover:text-red-500 text-2xl"><X className="w-7 h-7 text-primary" /></button>
-          </div>
-          <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4">
-            {items.length === 0 ? (
-              <div className="text-gray-500 text-center">Tu carrito está vacío.</div>
-            ) : (
-              items.map(item => (
-                <div key={item.id} className="flex gap-3 border-b pb-4 pt-2 last:border-b-0 items-center">
-                  <img src="https://laticamp.com/wp-content/uploads/2024/02/tofdos-los-sabores-sin-fondo-1.1-300x300.png" alt={item.name} className="w-20 h-20 object-cover rounded" />
-                  <div className="flex-1 flex flex-col justify-between min-w-0 ">
-                    <div className="flex flex-col min-w-0">
-                      <span className="font-semibold leading-tight truncate text-sm md:text-lg text-[#222]">{item.name}</span>
-                      <span className="text-accent text-xs md:text-sm">150 mll</span>
-                    </div>
-                    <span className="font-bold text-lg text-[#222]">S/. {item.price.toFixed(2)}</span>
-                  </div>
-
-                  <button className="btn btn-circle btn-error" onClick={() => removeFromCart(item.id)}>
-                    <TrashIcon className="w-4 h-4" />
+              <div className="hidden md:flex gap-4 items-center">
+                {NAV_LINKS.map((link) => (
+                  <button
+                    key={link.label}
+                    className="flex items-center text-[#253d4e] focus:outline-none hover:text-primary relative btn btn-link"
+                    type="button"
+                    aria-label={link.label}
+                    onClick={() => handleNavClick(link.id)}
+                  >
+                    {link.label}
                   </button>
-
-
-                </div>
-              ))
-            )}
-          </div>
-          <div className="p-4 border-t flex flex-col gap-3">
-            <div className="flex justify-between items-center">
-              <span className="font-semibold text-[#222]">Total</span>
-              <span className="font-bold text-lg text-[#222]">S/. {total.toFixed(2)}</span>
+                ))}
+              </div>
+              <button
+                className="flex items-center text-primary focus:outline-none relative"
+                type="button"
+                aria-label="Ver carrito"
+                onClick={() => setDrawerOpen(true)}
+              >
+                <ShoppingBag className="w-8 h-8 text-primary" />
+                {items.length > 0 && (
+                  <span className="absolute top-0 right-0 bg-green-500 text-white rounded-full px-1 text-xs">{items.length}</span>
+                )}
+              </button>
             </div>
-            <button
-              className="bg-primary py-2 rounded-lg text-[#222]"
-              onClick={() => {
-                setDrawerOpen(false);
-                navigate("/cart");
-              }}
-              disabled={items.length === 0}
+          </header>
+
+          {/* Cart Side Panel (always mounted for animation) */}
+          <div className="fixed inset-0 z-[60] pointer-events-none">
+            {/* Overlay (only interactive when open) */}
+            <div
+              className={`fixed inset-0 bg-black bg-opacity-40 transition-opacity duration-300 ${isDrawerOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+              onClick={() => setDrawerOpen(false)}
+              aria-label="Cerrar carrito"
+              tabIndex={-1}
+            />
+            {/* Cart Panel */}
+            <aside
+              className={`ml-auto w-full max-w-md bg-white h-full shadow-xl flex flex-col fixed right-0 top-0 z-[61] transition-transform duration-300 ${isDrawerOpen ? 'translate-x-0' : 'translate-x-full'}`}
+              tabIndex={0}
+              aria-label="Carrito de compras"
+              role="dialog"
             >
-              Ver más detalles
-            </button>
+              <button
+                onClick={() => setDrawerOpen(false)}
+                aria-label="Cerrar carrito"
+                className="btn btn-ghost absolute top-4 right-4 z-10"
+                tabIndex={0}
+              >
+                <X className="w-7 h-7" />
+              </button>
+              <div className="flex justify-between items-center p-4 border-b">
+                <span className="text-xl font-bold text-primary">Tu Carrito</span>
+              </div>
+              <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4">
+                {items.length === 0 ? (
+                  <div className="text-gray-500 text-center">Tu carrito está vacío.</div>
+                ) : (
+                  items.map(item => (
+                    <div key={item.id} className="flex gap-3 border-b pb-4 pt-2 last:border-b-0 items-center">
+                      <img src="https://laticamp.com/wp-content/uploads/2024/02/tofdos-los-sabores-sin-fondo-1.1-300x300.png" alt={item.name} className="w-20 h-20 object-cover rounded" />
+                      <div className="flex-1 flex flex-col justify-between min-w-0 ">
+                        <div className="flex flex-col min-w-0">
+                          <span className="font-semibold leading-tight truncate text-sm md:text-lg text-[#222]">{item.name}</span>
+                          <span className="text-accent text-xs md:text-sm">150 mll</span>
+                        </div>
+                        <span className="font-bold text-lg text-[#222]">S/. {item.price.toFixed(2)}</span>
+                      </div>
+
+                      <button className="btn btn-circle btn-error" onClick={() => removeFromCart(item.id)}>
+                        <TrashIcon className="w-4 h-4" />
+                      </button>
+                    </div>
+                  ))
+                )}
+              </div>
+              <div className="p-4 border-t flex flex-col gap-3 pb-24">
+                <div className="flex justify-between items-center">
+                  <span className="font-semibold text-[#222]">Total</span>
+                  <span className="font-bold text-lg text-[#222]">S/. {total.toFixed(2)}</span>
+                </div>
+                <button
+                  className="bg-primary py-2 rounded-lg text-[#222]"
+                  onClick={() => {
+                    setDrawerOpen(false);
+                    navigate("/cart");
+                  }}
+                  disabled={items.length === 0}
+                >
+                  Ver más detalles
+                </button>
+              </div>
+            </aside>
           </div>
         </div>
-      </Drawer>
+        <div className="drawer-side z-50">
+          <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+          {/* Mobile drawer close button */}
+          <label
+            htmlFor="my-drawer"
+            className="btn btn-ghost absolute top-4 right-32 z-10"
+            aria-label="Cerrar menú"
+            tabIndex={0}
+          >
+            <X className="w-7 h-7" />
+          </label>
+          <ul className="menu bg-base-200 text-base-content min-h-full w-64 p-4 ">
+
+            <img src={Logo} alt="Logo" className="w-14 h-14 md:w-20 md:h-20 " />
+            <li className="mb-4 font-bold text-2xl text-primary">VitaLight</li>
+            {NAV_LINKS.map((link) => (
+              <li key={link.label}>
+                <a
+                  className="text-primary text-lg font-semibold hover:bg-[#eaf8e5] focus:outline-none"
+                  onClick={() => handleMobileNavClick(link.id)}
+                  aria-label={link.label}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
     </>
   );
 };
