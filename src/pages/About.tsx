@@ -10,12 +10,13 @@ export default function About() {
         data-aos-delay="200"
         data-aos-duration="500"
       >
-        <span className="text-primary font-semibold text-xs tracking-widest uppercase">Quiénes somos</span>
+        <span className="text-primary font-semibold text-xs tracking-widest uppercase">Ofrecemos</span>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-          En VitaLight, nuestro compromiso es llevar hasta ti productos auténticos, nutritivos y cuidadosamente seleccionados.
+
+          Productos que nutren tu vida.
         </h2>
         <p className="text-gray-500 text-base md:text-lg">
-          Calidad que se siente, naturaleza que se vive. Productos que nutren tu vida.
+          Auténticos, nutritivos y cuidadosamente seleccionados.
         </p>
         <ul className="flex flex-col gap-4 mt-2">
           <li className="flex items-start gap-3">
@@ -48,7 +49,7 @@ export default function About() {
         </ul>
       </div>
       {/* Columna derecha: imágenes */}
-      <div 
+      <div
         className="md:w-1/2 w-full flex flex-col items-center mt-10 md:mt-0"
         data-aos="fade-up"
         data-aos-delay="200"
@@ -56,7 +57,7 @@ export default function About() {
       >
         <div className="relative">
           <img
-            src="https://images.unsplash.com/photo-1688377129820-d66b35657c88?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.pexels.com/photos/5480236/pexels-photo-5480236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Jugos naturales"
             className="rounded-xl shadow-lg w-auto h-[650px] object-cover"
           />

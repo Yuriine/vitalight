@@ -15,10 +15,14 @@ const NAV_LINKS = [
 
 
 const Header: React.FC = () => {
-
   const [isDrawerOpen, setDrawerOpen] = useState(false);
+  const [cartVisible, setCartVisible] = useState(false);
+
   React.useEffect(() => {
     if (isDrawerOpen) {
+      setCartVisible(false);
+      // Wait for next frame to trigger transition
+      requestAnimationFrame(() => setCartVisible(true));
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
@@ -27,6 +31,11 @@ const Header: React.FC = () => {
       document.body.classList.remove("overflow-hidden");
     };
   }, [isDrawerOpen]);
+
+  const handleCartClose = () => {
+    setCartVisible(false);
+    setTimeout(() => setDrawerOpen(false), 300);
+  };
 
   const { items, removeFromCart } = useCartStore();
 
@@ -50,66 +59,66 @@ const Header: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <>
-      <div className="drawer">
-        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content">
-          <header className="fixed top-0 left-0 w-full z-50 bg-white shadow flex items-center justify-between py-3 px-4 md:px-8 gap-4 md:gap-6">
-            <div className="flex justify-between w-full items-center gap-2">
-              {/* Burger menu for mobile */}
-              <label
-                htmlFor="my-drawer"
-                className="md:hidden mr-2 p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary drawer-button"
-              >
-                <Menu className="w-7 h-7 text-primary" />
-              </label>
-              <img src={Logo} alt="Logo" className="w-14 h-14 md:w-20 md:h-20 " />
+    <div>
+      <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+      <div className="drawer-content">
+        <header className="fixed top-0 left-0 w-full z-50 bg-white shadow flex items-center justify-between py-3 px-4 md:px-8 gap-4 md:gap-6">
+          <div className="flex justify-between w-full items-center gap-2">
+            {/* Burger menu for mobile */}
+            <label
+              htmlFor="my-drawer"
+              className="md:hidden mr-2 p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary drawer-button"
+            >
+              <Menu className="w-7 h-7 text-primary" />
+            </label>
+            <img src={Logo} alt="Logo" className="w-14 h-14 md:w-20 md:h-20 " />
 
-              <div className="hidden md:flex gap-4 items-center">
-                {NAV_LINKS.map((link) => (
-                  <button
-                    key={link.label}
-                    className="flex items-center text-[#253d4e] focus:outline-none hover:text-primary relative btn btn-link"
-                    type="button"
-                    aria-label={link.label}
-                    onClick={() => handleNavClick(link.id)}
-                  >
-                    {link.label}
-                  </button>
-                ))}
-              </div>
-              <button
-                className="flex items-center text-primary focus:outline-none relative"
-                type="button"
-                aria-label="Ver carrito"
-                onClick={() => setDrawerOpen(true)}
-              >
-                <ShoppingBag className="w-8 h-8 text-primary" />
-                {items.length > 0 && (
-                  <span className="absolute top-0 right-0 bg-green-500 text-white rounded-full px-1 text-xs">{items.length}</span>
-                )}
-              </button>
+            <div className="hidden md:flex gap-4 items-center">
+              {NAV_LINKS.map((link) => (
+                <button
+                  key={link.label}
+                  className="flex items-center text-[#253d4e] focus:outline-none hover:text-primary relative btn btn-link"
+                  type="button"
+                  aria-label={link.label}
+                  onClick={() => handleNavClick(link.id)}
+                >
+                  {link.label}
+                </button>
+              ))}
             </div>
-          </header>
+            <button
+              className="flex items-center text-primary focus:outline-none relative"
+              type="button"
+              aria-label="Ver carrito"
+              onClick={() => setDrawerOpen(true)}
+            >
+              <ShoppingBag className="w-8 h-8 text-primary" />
+              {items.length > 0 && (
+                <span className="absolute top-0 right-0 bg-green-500 text-white rounded-full px-1 text-xs">{items.length}</span>
+              )}
+            </button>
+          </div>
+        </header>
 
-          {/* Cart Side Panel (always mounted for animation) */}
-          <div className="fixed inset-0 z-[60] pointer-events-none">
-            {/* Overlay (only interactive when open) */}
+        {/* Cart Side Panel (only mounted when open) */}
+        {isDrawerOpen && (
+          <div className="fixed inset-0 z-[60]">
+            {/* Overlay */}
             <div
-              className={`fixed inset-0 bg-black bg-opacity-40 transition-opacity duration-300 ${isDrawerOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
-              onClick={() => setDrawerOpen(false)}
+              className="fixed inset-0 bg-black bg-opacity-40 transition-opacity duration-300 opacity-100 pointer-events-auto"
+              onClick={handleCartClose}
               aria-label="Cerrar carrito"
               tabIndex={-1}
             />
             {/* Cart Panel */}
             <aside
-              className={`ml-auto w-full max-w-md bg-white h-full shadow-xl flex flex-col fixed right-0 top-0 z-[61] transition-transform duration-300 ${isDrawerOpen ? 'translate-x-0' : 'translate-x-full'}`}
+              className={`ml-auto w-full max-w-md bg-white h-full shadow-xl flex flex-col fixed right-0 top-0 z-100 transition-all duration-300 ${cartVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'}`}
               tabIndex={0}
               aria-label="Carrito de compras"
               role="dialog"
             >
               <button
-                onClick={() => setDrawerOpen(false)}
+                onClick={handleCartClose}
                 aria-label="Cerrar carrito"
                 className="btn btn-ghost absolute top-4 right-4 z-10"
                 tabIndex={0}
@@ -147,7 +156,7 @@ const Header: React.FC = () => {
                   <span className="font-bold text-lg text-[#222]">S/. {total.toFixed(2)}</span>
                 </div>
                 <button
-                  className="bg-primary py-2 rounded-lg text-[#222]"
+                  className="btn btn-success py-2 rounded-lg text-[#222]"
                   onClick={() => {
                     setDrawerOpen(false);
                     navigate("/cart");
@@ -159,38 +168,38 @@ const Header: React.FC = () => {
               </div>
             </aside>
           </div>
-        </div>
-        <div className="drawer-side z-50">
-          <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-          {/* Mobile drawer close button */}
-          <label
-            htmlFor="my-drawer"
-            className="btn btn-ghost absolute top-4 right-32 z-10"
-            aria-label="Cerrar menú"
-            tabIndex={0}
-          >
-            <X className="w-7 h-7" />
-          </label>
-          <ul className="menu bg-base-200 text-base-content min-h-full w-64 p-4 ">
-
-            <img src={Logo} alt="Logo" className="w-14 h-14 md:w-20 md:h-20 " />
-            <li className="mb-4 font-bold text-2xl text-primary">VitaLight</li>
-            {NAV_LINKS.map((link) => (
-              <li key={link.label}>
-                <a
-                  className="text-primary text-lg font-semibold hover:bg-[#eaf8e5] focus:outline-none"
-                  onClick={() => handleMobileNavClick(link.id)}
-                  aria-label={link.label}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        )}
       </div>
+      <div className="drawer-side z-50">
+        <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+        {/* Mobile drawer close button */}
+        <label
+          htmlFor="my-drawer"
+          className="btn btn-ghost absolute top-4 right-32 z-10"
+          aria-label="Cerrar menú"
+          tabIndex={0}
+        >
+          <X className="w-7 h-7" />
+        </label>
+        <ul className="menu bg-base-200 text-base-content min-h-full w-64 p-4 ">
 
-    </>
+          <img src={Logo} alt="Logo" className="w-14 h-14 md:w-20 md:h-20 " />
+          <li className="mb-4 font-bold text-2xl text-primary">VitaLight</li>
+          {NAV_LINKS.map((link) => (
+            <li key={link.label}>
+              <a
+                className="text-primary text-lg font-semibold hover:bg-[#eaf8e5] focus:outline-none"
+                onClick={() => handleMobileNavClick(link.id)}
+                aria-label={link.label}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
   );
 };
 

@@ -6,7 +6,7 @@ export interface Product {
   id: number;
   name: string;
   price: number;
-  description?: string;
+  presentation: string;
   category: string;
   image: string;
 }
@@ -36,7 +36,7 @@ export const useProductsStore = create<ProductsState>()(
         set({ isLoading: true, error: null });
         setTimeout(() => {
           set({ 
-            products: productsData.products, 
+            products: productsData, 
             isLoading: false 
           });
         }, 300);

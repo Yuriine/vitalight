@@ -1,84 +1,331 @@
-{
-  "products": [
-    {
-      "id": 1,
-      "name": "Aceite de Coco Orgánico",
-      "price": 120,
-      "description": "Aceite de coco prensado en frío, 100% natural. Ideal para cocinar o uso cosmético.",
-      "category": "Superfoods",
-      "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      "id": 2,
-      "name": "Proteína Vegana de Chía",
-      "price": 180,
-      "description": "Mezcla de proteína vegetal con chía, sin azúcar añadida.",
-      "category": "Proteínas",
-      "image": "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      "id": 3,
-      "name": "Barra Energética de Almendra",
-      "price": 35,
-      "description": "Barra energética con almendras y miel natural.",
-      "category": "Snacks",
-      "image": "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      "id": 4,
-      "name": "Mix de Semillas Antioxidante",
-      "price": 90,
-      "description": "Mix de semillas de girasol, calabaza y chía.",
-      "category": "Superfoods",
-      "image": "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      "id": 5,
-      "name": "Mantequilla de Maní Natural",
-      "price": 75,
-      "description": "Mantequilla de maní sin azúcar ni aceites añadidos.",
-      "category": "Untables",
-      "image": "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      "id": 6,
-      "name": "Granola Artesanal",
-      "price": 65,
-      "description": "Granola con frutos secos y miel de agave.",
-      "category": "Snacks",
-      "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      "id": 7,
-      "name": "Té Verde Matcha Premium",
-      "price": 150,
-      "description": "Matcha japonés de alta pureza, ideal para bebidas y postres.",
-      "category": "Bebidas",
-      "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      "id": 8,
-      "name": "Cacao Orgánico en Polvo",
-      "price": 110,
-      "description": "Cacao puro, sin azúcares añadidos, ideal para repostería.",
-      "category": "Superfoods",
-      "image": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b43?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      "id": 9,
-      "name": "Agua de Coco Natural",
-      "price": 40,
-      "description": "Agua de coco fresca, sin conservadores.",
-      "category": "Bebidas",
-      "image": "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      "id": 10,
-      "name": "Pan de Masa Madre Integral",
-      "price": 55,
-      "description": "Pan artesanal de masa madre, alto en fibra.",
-      "category": "Panadería",
-      "image": "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "name": "Mantequilla de mani",
+    "price": 17.8,
+    "presentation": "500 g",
+    "category": "Untables",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 2,
+    "name": "Mantequilla de mani",
+    "price": 11.4,
+    "presentation": "250 g",
+    "category": "Untables",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 3,
+    "name": "Mantequilla de chocolate",
+    "price": 19.2,
+    "presentation": "500 g",
+    "category": "Untables",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 4,
+    "name": "Mantequilla de chocolate",
+    "price": 12.1,
+    "presentation": "250 g",
+    "category": "Untables",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 5,
+    "name": "Mermelada de Fresa",
+    "price": 11.4,
+    "presentation": "",
+    "category": "Untables",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 6,
+    "name": "Mermelada de frutos rojos",
+    "price": 11.4,
+    "presentation": "",
+    "category": "Untables",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 7,
+    "name": "Mermelada de Mango",
+    "price": 11.4,
+    "presentation": "",
+    "category": "Untables",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 8,
+    "name": "Stevia",
+    "price": 17.8,
+    "presentation": "100 uu",
+    "category": "Ingredientes",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 9,
+    "name": "Stevia",
+    "price": 11.4,
+    "presentation": "50 uu",
+    "category": "Ingredientes",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 10,
+    "name": "Aceite de coco de",
+    "price": 12.1,
+    "presentation": "850 ml",
+    "category": "Aceites y Vinagres",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 11,
+    "name": "Aceite de oliva Extra Virgen",
+    "price": 23.5,
+    "presentation": "500 ml",
+    "category": "Aceites y Vinagres",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 12,
+    "name": "Aceite de oliva Extra Virgen",
+    "price": 31.4,
+    "presentation": "750 ml",
+    "category": "Aceites y Vinagres",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 13,
+    "name": "Harina de avena",
+    "price": 8.5,
+    "presentation": "500 g",
+    "category": "Ingredientes",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 14,
+    "name": "Harina de avena",
+    "price": 16.2,
+    "presentation": "1 kg",
+    "category": "Ingredientes",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 15,
+    "name": "Granola sabor natural",
+    "price": 20.0,
+    "presentation": "500 g",
+    "category": "Cereales",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 16,
+    "name": "Granola sabor natural",
+    "price": 36.2,
+    "presentation": "1 kg",
+    "category": "Cereales",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 17,
+    "name": "Sal marina",
+    "price": 2.1,
+    "presentation": "250 g",
+    "category": "Ingredientes",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 18,
+    "name": "Sal marina",
+    "price": 4.2,
+    "presentation": "500 g",
+    "category": "Ingredientes",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 19,
+    "name": "Cacao en polvo",
+    "price": 25.7,
+    "presentation": "250 g",
+    "category": "Dulces",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 20,
+    "name": "Cacao en polvo",
+    "price": 43.5,
+    "presentation": "500 g",
+    "category": "Dulces",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 21,
+    "name": "Polvo de cacao y",
+    "price": 19.2,
+    "presentation": "125 g",
+    "category": "Dulces",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 22,
+    "name": "Panela granulada",
+    "price": 4.2,
+    "presentation": "250 g",
+    "category": "Ingredientes",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 23,
+    "name": "Panela granulada",
+    "price": 8.5,
+    "presentation": "500 g",
+    "category": "Ingredientes",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 24,
+    "name": "Café molido",
+    "price": 14.2,
+    "presentation": "250 g",
+    "category": "Dulces",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 25,
+    "name": "Café molido",
+    "price": 25.7,
+    "presentation": "500 g",
+    "category": "Dulces",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 26,
+    "name": "Levadura seca",
+    "price": 5.7,
+    "presentation": "50 g",
+    "category": "Ingredientes",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 27,
+    "name": "Levadura seca",
+    "price": 10.2,
+    "presentation": "100 g",
+    "category": "Ingredientes",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 28,
+    "name": "Vinagre de manzana",
+    "price": 6.1,
+    "presentation": "500 ml",
+    "category": "Aceites y Vinagres",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 29,
+    "name": "Vinagre de manzana",
+    "price": 10.2,
+    "presentation": "1 l",
+    "category": "Aceites y Vinagres",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 30,
+    "name": "Esencia de vainilla",
+    "price": 4.2,
+    "presentation": "30 ml",
+    "category": "Ingredientes",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 31,
+    "name": "Esencia de vainilla",
+    "price": 8.5,
+    "presentation": "50 ml",
+    "category": "Ingredientes",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 32,
+    "name": "Galleta integral",
+    "price": 9.6,
+    "presentation": "200 g",
+    "category": "Cereales",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 33,
+    "name": "Galleta integral",
+    "price": 15.0,
+    "presentation": "400 g",
+    "category": "Cereales",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 34,
+    "name": "Granola con frutos secos",
+    "price": 22.8,
+    "presentation": "500 g",
+    "category": "Cereales",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 35,
+    "name": "Granola con frutos secos",
+    "price": 41.2,
+    "presentation": "1 kg",
+    "category": "Cereales",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 36,
+    "name": "Avena instantánea",
+    "price": 10.2,
+    "presentation": "250 g",
+    "category": "Cereales",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 37,
+    "name": "Avena instantánea",
+    "price": 16.2,
+    "presentation": "400 g",
+    "category": "Cereales",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 38,
+    "name": "Barra de chocolate",
+    "price": 7.8,
+    "presentation": "50 g",
+    "category": "Dulces",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 39,
+    "name": "Barra de chocolate",
+    "price": 13.5,
+    "presentation": "100 g",
+    "category": "Dulces",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 40,
+    "name": "Barra de cereal",
+    "price": 4.2,
+    "presentation": "30 g",
+    "category": "Cereales",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 41,
+    "name": "Barra de cereal",
+    "price": 8.5,
+    "presentation": "60 g",
+    "category": "Cereales",
+    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  }
+  
+]
