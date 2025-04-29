@@ -5,6 +5,7 @@ import "react-modern-drawer/dist/index.css";
 import { useNavigate } from "react-router";
 import Logo from "../assets/logo.png";
 import { useCartStore } from "../stores/cart";
+import { scrollToSection } from "../utils/scrollAnimation";
 
 const NAV_LINKS = [
   { label: "Inicio", id: "inicio" },
@@ -31,40 +32,13 @@ const Header: React.FC = () => {
 
   const { items, removeFromCart } = useCartStore();
 
-  //**Esta función agrega la animación de scrool */
+  // Función para manejar la navegación con animación de scroll
   const handleNavClick = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      // Cerrar el drawer si está abierto
-      setNavDrawerOpen(false);
-
-      const headerOffset = 80;
-      const sectionPosition = section.getBoundingClientRect().top;
-      const offsetPosition = sectionPosition + window.pageYOffset - headerOffset;
-      const startPosition = window.pageYOffset;
-      const distance = offsetPosition - startPosition;
-
-      const duration = 800;
-      let start: number | null = null;
-
-      const animateScroll = (timestamp: number) => {
-        if (!start) start = timestamp;
-        const progress = timestamp - start;
-        const percentage = Math.min(progress / duration, 1);
-
-        const easing = (t: number) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-
-        const position = startPosition + distance * easing(percentage);
-
-        window.scrollTo(0, position);
-
-        if (progress < duration) {
-          requestAnimationFrame(animateScroll);
-        }
-      };
-
-      requestAnimationFrame(animateScroll);
-    }
+    // Cerrar el drawer si está abierto
+    setNavDrawerOpen(false);
+    
+    // Usar la función de utilidad para hacer scroll
+    scrollToSection(id);
   };
 
   const total = items.reduce(
@@ -91,7 +65,7 @@ const Header: React.FC = () => {
             {NAV_LINKS.map((link) => (
               <button
                 key={link.label}
-                className="flex items-center text-[#253d4e] focus:outline-none relative btn btn-link"
+                className="flex items-center text-[#253d4e] focus:outline-none hover:text-primary relative btn btn-link"
                 type="button"
                 aria-label={link.label}
                 onClick={() => handleNavClick(link.id)}
