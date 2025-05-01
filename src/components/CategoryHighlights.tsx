@@ -42,7 +42,7 @@ const CATEGORY_CARDS = [
     title: "Aceites y Vinagres",
     subtitle: "Gourmet y saludables para tu cocina.",
     className: "col-span-2 sm:col-span-2 sm:row-span-6",
-    bgImage: "https://images.unsplash.com/photo-1628268909461-ec1eec52a74e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    bgImage: "https://i.pinimg.com/736x/fc/dd/4f/fcdd4f839faf4d3fe5c22e3980d4b868.jpg",
   },
   {
     title: "Untables",
@@ -54,13 +54,13 @@ const CATEGORY_CARDS = [
     title: "Cereales y Snacks",
     subtitle: "Desayunos y antojos nutritivos.",
     className: "col-span-2 sm:col-span-1 sm:row-span-6",
-    bgImage: "https://images.pexels.com/photos/596133/pexels-photo-596133.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    bgImage: "https://i.pinimg.com/736x/95/a7/fc/95a7fc582625d9c6449fd3c04781a89a.jpg"
   },
   {
     title: "Ingredientes",
     subtitle: "Esenciales para cocina y presentación.",
     className: "col-span-2 sm:col-span-2 sm:row-span-3",
-    bgImage: "https://images.pexels.com/photos/1295572/pexels-photo-1295572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    bgImage: "https://i.pinimg.com/736x/3d/9b/61/3d9b617901529678092c8b92a3aeb725.jpg",
   },
 
   {
