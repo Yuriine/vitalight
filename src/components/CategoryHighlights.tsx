@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 interface CategoryCardProps {
   title: string;
@@ -13,8 +14,10 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   className = '',
   bgImage,
 }) => (
-  <div
+
+  <Link
     className={`relative rounded-xl overflow-hidden shadow-xl group flex flex-col justify-end min-h-[200px] ${className}`}
+    to="/productos" state={{ category: title }}
     tabIndex={0}
     aria-label={title}
   >
@@ -32,14 +35,15 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
       <p className="text-white text-sm drop-shadow-lg mb-0 hidden md:block">{subtitle}</p>
 
     </div>
-  </div>
+  </Link>
+
 );
 
 
 
 const CATEGORY_CARDS = [
   {
-    title: "Aceites y Vinagres",
+    title: "Aceites",
     subtitle: "Gourmet y saludables para tu cocina.",
     className: "col-span-2 sm:col-span-2 sm:row-span-6",
     bgImage: "https://i.pinimg.com/736x/fc/dd/4f/fcdd4f839faf4d3fe5c22e3980d4b868.jpg",
@@ -51,21 +55,21 @@ const CATEGORY_CARDS = [
     bgImage: "https://images.pexels.com/photos/5419208/pexels-photo-5419208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
-    title: "Cereales y Snacks",
+    title: "Snacks",
     subtitle: "Desayunos y antojos nutritivos.",
     className: "col-span-2 sm:col-span-1 sm:row-span-6",
     bgImage: "https://i.pinimg.com/736x/95/a7/fc/95a7fc582625d9c6449fd3c04781a89a.jpg"
   },
   {
-    title: "Ingredientes de Cocina",
+    title: "Ingredientes",
     subtitle: "Esenciales para cocina y presentación.",
     className: "col-span-2 sm:col-span-2 sm:row-span-3",
     bgImage: "https://i.pinimg.com/736x/29/37/0e/29370e86af75485d4f33644b68e040d4.jpg",
   },
 
   {
-    title: "Dulces y Cafés",
-    subtitle: "Delicias y derivados del café.",
+    title: "Dulces",
+    subtitle: "Delicias de chocolate y derivados del café.",
     className: "col-span-2 sm:col-span-2 sm:row-span-3",
     bgImage: "https://i.pinimg.com/736x/22/c2/9a/22c29a8a954435a92919fe8b9f50ea4c.jpg",
   },

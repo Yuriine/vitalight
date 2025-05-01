@@ -4,8 +4,10 @@ import { useCartStore } from "../stores/cart";
 import toast from "react-hot-toast";
 import { ShoppingCart } from "lucide-react";
 
+
+
 const ProductTabs: React.FC = () => {
-  const { products, isLoading, error, fetchProducts, activeCategory, setActiveCategory } = useProductsStore();
+  const { products, isLoading, error, fetchProducts, setActiveCategory, activeCategory } = useProductsStore();
   const { addToCart } = useCartStore();
   const [categories, setCategories] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>("");

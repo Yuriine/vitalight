@@ -76,7 +76,7 @@
     "name": "Aceite de coco de",
     "price": 12.1,
     "presentation": "850 ml",
-    "category": "Aceites y Vinagres",
+    "category": "Aceites",
     "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -84,7 +84,7 @@
     "name": "Aceite de oliva Extra Virgen",
     "price": 23.5,
     "presentation": "500 ml",
-    "category": "Aceites y Vinagres",
+    "category": "Aceites",
     "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -92,7 +92,7 @@
     "name": "Aceite de oliva Extra Virgen",
     "price": 31.4,
     "presentation": "750 ml",
-    "category": "Aceites y Vinagres",
+    "category": "Aceites",
     "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -116,7 +116,7 @@
     "name": "Granola sabor natural",
     "price": 20.0,
     "presentation": "500 g",
-    "category": "Cereales",
+    "category": "Snacks",
     "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -124,7 +124,7 @@
     "name": "Granola sabor natural",
     "price": 36.2,
     "presentation": "1 kg",
-    "category": "Cereales",
+    "category": "Snacks",
     "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -220,7 +220,7 @@
     "name": "Vinagre de manzana",
     "price": 6.1,
     "presentation": "500 ml",
-    "category": "Aceites y Vinagres",
+    "category": "Aceites",
     "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -228,7 +228,7 @@
     "name": "Vinagre de manzana",
     "price": 10.2,
     "presentation": "1 l",
-    "category": "Aceites y Vinagres",
+    "category": "Aceites",
     "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -252,7 +252,7 @@
     "name": "Galleta integral",
     "price": 9.6,
     "presentation": "200 g",
-    "category": "Cereales",
+    "category": "Snacks",
     "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -260,7 +260,7 @@
     "name": "Galleta integral",
     "price": 15.0,
     "presentation": "400 g",
-    "category": "Cereales",
+    "category": "Snacks",
     "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -268,7 +268,7 @@
     "name": "Granola con frutos secos",
     "price": 22.8,
     "presentation": "500 g",
-    "category": "Cereales",
+    "category": "Snacks",
     "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -276,7 +276,7 @@
     "name": "Granola con frutos secos",
     "price": 41.2,
     "presentation": "1 kg",
-    "category": "Cereales",
+    "category": "Snacks",
     "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -284,7 +284,7 @@
     "name": "Avena instantánea",
     "price": 10.2,
     "presentation": "250 g",
-    "category": "Cereales",
+    "category": "Snacks",
     "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -292,7 +292,7 @@
     "name": "Avena instantánea",
     "price": 16.2,
     "presentation": "400 g",
-    "category": "Cereales",
+    "category": "Snacks",
     "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -316,7 +316,7 @@
     "name": "Barra de cereal",
     "price": 4.2,
     "presentation": "30 g",
-    "category": "Cereales",
+    "category": "Snacks",
     "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -324,7 +324,7 @@
     "name": "Barra de cereal",
     "price": 8.5,
     "presentation": "60 g",
-    "category": "Cereales",
+    "category": "Snacks",
     "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   }
   
