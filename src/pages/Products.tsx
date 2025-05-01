@@ -7,9 +7,12 @@ export default function Products() {
   const { state } = useLocation();
   const category = state?.category || "Untables";
   const { setActiveCategory } = useProductsStore();
+  
   useEffect(() => {
-    setActiveCategory(category);
-  }, [category]);
+    setActiveCategory(category);    
+    window.scrollTo(0, 0);
+  }, [category, setActiveCategory]);
+  
   return (
     <ProductTabs />
   )

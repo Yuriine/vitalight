@@ -11,6 +11,8 @@ import { formatWhatsappOrder } from "../utils/whatsapp";
 const Cart: React.FC = () => {
   useEffect(() => {
     AOS.init({ once: true, duration: 700, offset: 80 });
+    // Desplazar al inicio cuando se carga la página del carrito
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
   const { items, removeFromCart } = useCartStore();
   const total = items.reduce(
@@ -43,7 +45,7 @@ const Cart: React.FC = () => {
       >
         <button
           className="btn btn-neutral rounded-lg mx-4 "
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/productos")}
           type="button"
         >
           <ChevronLeft /> Seguir comprando

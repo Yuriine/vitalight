@@ -87,7 +87,7 @@ const CategoryHighlights: React.FC = () => (
       <h2 className="text-2xl md:text-5xl text-center font-bold text-primary leading-tight mb-2"> Categorías</h2>
       <p className="text-[#939393] text-center text-lg">Explora nuestras variedad de categorías de productos.</p>
     </div>
-    <div className="grid w-full max-w-6xl gap-3 sm:gap-4 md:gap-6 grid-cols-2 sm:grid-cols-3 grid-rows-6 sm:grid-rows-3 auto-rows-[90px] sm:auto-rows-[100px]">
+    <div className="grid w-full max-w-6xl gap-3 sm:gap-4 md:gap-6 grid-cols-2 sm:grid-cols-3 grid-rows-6 sm:grid-rows-3 auto-rows-[90px] sm:auto-rows-[100px] p-3 md:p-3">
       {CATEGORY_CARDS.map((cat, idx) => (
         <CategoryCard
           key={idx}
