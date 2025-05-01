@@ -43,7 +43,8 @@ const ProductTabs: React.FC = () => {
     (product) =>
       product.category === activeCategory &&
       (
-        product.name.toLowerCase().includes(searchTerm.toLowerCase())
+        product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.name.toUpperCase().includes(searchTerm.toUpperCase())
 
       )
   );

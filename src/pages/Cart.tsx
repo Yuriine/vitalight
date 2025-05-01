@@ -42,7 +42,7 @@ const Cart: React.FC = () => {
         className="min-h-screen py-10 bg-cover  bg-no-repeat bg-center relative bg-primary"
       >
         <button
-          className="btn btn-neutral rounded-lg mx-4"
+          className="btn btn-neutral rounded-lg mx-4 "
           onClick={() => navigate("/")}
           type="button"
         >
@@ -51,7 +51,7 @@ const Cart: React.FC = () => {
         {/* Overlay para mejorar legibilidad */}
         <div className=" z-10 p-4">
           {/* Header llamativo */}
-          <div className="flex flex-col md:justify-center items-center gap-3 mb-8" data-aos="fade-down">
+          <div className="flex flex-col md:justify-center items-center gap-3 my-16" data-aos="fade-down">
             <h1 className="text-3xl font-extrabold">Tu Carrito</h1>
             <p className="text-base-content/70 text-sm">Revisa tus productos y finaliza tu compra</p>
           </div>

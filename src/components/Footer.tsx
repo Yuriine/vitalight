@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
     <footer id='contacto' className="w-full bg-white border-t border-gray-200 pt-10 pb-6 px-4 mt-10 text-[#253d4e]">
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Logo y contacto */}
-        <div className="flex flex-col items-center md:items-start gap-3 col-span-1">
+        <div className="flex flex-col items-center md:items-start mb-10 md:mb-0 col-span-1">
           <img src={Logo} alt="Logo Linea Zero" className="w-28 h-auto mb-2" />
           <span className="text-xl tracking-wide text-green-700 font-bold">VitaLight</span>
           <div className="mt-4 flex flex-col gap-2">
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
 
         {/* Navegación del sitio */}
         <div className="col-span-1">
-          <h4 className="font-semibold mb-2">Navegación del sitio</h4>
+          <h4 className="font-semibold mb-2">Navegación</h4>
           <ul className="text-sm space-y-4 mt-6">
             <li><a href="#" className="hover:underline">Inicio</a></li>
             <li><a href="#acerca" className="hover:underline">Acerca de</a></li>
@@ -32,8 +32,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Redes sociales */}
-        <div className="col-span-1 flex flex-col items-center md:items-end gap-2">
-          <h4 className="font-semibold mb-2">Síguenos</h4>
+        <div className="col-span-1 flex flex-col items-start gap-2">
+          <h4 className="font-semibold mb-2">Redes Sociales</h4>
           <div className="flex gap-3">
             <a href="#" aria-label="Facebook" className="hover:opacity-70">
               <img src="https://img.icons8.com/?size=100&id=118466&format=png&color=12B886" className="w-6 h-6" />
@@ -44,7 +44,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <p className="text-xs text-center text-green-700 mt-8 opacity-80">© 2025 VitaLight. Todos los derechos reservados.</p>
+      <p className="text-xs text-center text-green-700 mt-16 opacity-80">© 2025 VitaLight. Todos los derechos reservados.</p>
+      <p className="text-xs text-center text-green-700 mt-16 opacity-80">Sitio desarrollado por <a href="https://grobles.framer.website" target="_blank" rel="noopener noreferrer" className='underline text-black'>Grobles</a>.</p>
     </footer>
   );
 };

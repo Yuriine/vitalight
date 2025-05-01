@@ -1,6 +1,6 @@
 import { Menu, ShoppingBag, TrashIcon, X } from "lucide-react";
 import React, { useState } from "react";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import Logo from "../assets/logo.png";
 import { useCartStore } from "../stores/cart";
 import { scrollToSection } from "../utils/scrollAnimation";
@@ -75,15 +75,26 @@ const Header: React.FC = () => {
 
             <div className="hidden md:flex gap-4 items-center">
               {NAV_LINKS.map((link) => (
-                <a
-                  key={link.label}
-                  className=" btn btn-neutral btn-ghost"
-                  type="button"
-                  aria-label={link.label}
-                  href={link.id.startsWith('/') ? link.id : `/#${link.id}`}
-                >
-                  {link.label}
-                </a>
+                link.id.startsWith('/') ? (
+                  <Link
+                    key={link.label}
+                    className="btn btn-neutral btn-ghost"
+                    to={link.id}
+                    state={{ category: "Untables" }}
+                    aria-label={link.label}
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.label}
+                    className="btn btn-neutral btn-ghost"
+                    href={`/#${link.id}`}
+                    aria-label={link.label}
+                  >
+                    {link.label}
+                  </a>
+                )
               ))}
             </div>
             <button

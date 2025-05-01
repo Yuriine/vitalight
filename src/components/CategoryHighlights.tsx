@@ -25,14 +25,14 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
     <img
       src={bgImage}
       alt={title}
-      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+      className="absolute inset-0 w-full h-full object-cover  group-hover:scale-105 transition-transform duration-300"
       draggable={false}
     />
 
     {/* Contenido abajo izquierda */}
     <div className="relative z-10 md:p-4 px-4 py-2 mt-auto flex flex-col gap-2 backdrop-blur-md">
       <h3 className="text-white text-xl font-bold drop-shadow-lg mb-0">{title}</h3>
-      <p className="text-white text-sm drop-shadow-lg mb-0 hidden md:block">{subtitle}</p>
+      <p className="text-white text-sm drop-shadow-lg mb-0">{subtitle}</p>
 
     </div>
   </Link>
@@ -52,7 +52,7 @@ const CATEGORY_CARDS = [
     title: "Untables",
     subtitle: "Sabores naturales para untar y disfrutar.",
     className: "col-span-2 sm:col-span-1 sm:row-span-6",
-    bgImage: "https://images.pexels.com/photos/5419208/pexels-photo-5419208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    bgImage: "https://i.pinimg.com/736x/52/18/56/521856dec6c9fe9b78435093f07ad521.jpg"
   },
   {
     title: "Snacks",
@@ -71,7 +71,7 @@ const CATEGORY_CARDS = [
     title: "Dulces",
     subtitle: "Delicias de chocolate y derivados del café.",
     className: "col-span-2 sm:col-span-2 sm:row-span-3",
-    bgImage: "https://i.pinimg.com/736x/22/c2/9a/22c29a8a954435a92919fe8b9f50ea4c.jpg",
+    bgImage: "https://i.pinimg.com/736x/34/c2/e8/34c2e84935f6be74625c23cdd306daab.jpg",
   },
 
 ];

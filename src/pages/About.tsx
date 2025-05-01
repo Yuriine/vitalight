@@ -18,7 +18,7 @@ export default function About() {
         <p className="text-gray-500 text-base md:text-lg">
           Auténticos, nutritivos y cuidadosamente seleccionados.
         </p>
-        <ul className="flex flex-col gap-4 mt-2">
+        <ul className="flex flex-col gap-8 mt-2">
           <li className="flex items-start gap-3">
             <span className="mt-1">
               <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#8fcf65" /><path d="M8 12.5l2.5 2.5 5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -57,7 +57,7 @@ export default function About() {
       >
         <div className="relative">
           <img
-            src="https://images.pexels.com/photos/5480236/pexels-photo-5480236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://i.pinimg.com/736x/d1/d1/60/d1d1603239c98304871dea0e9ec00eac.jpg"
             alt="Jugos naturales"
             className="rounded-xl shadow-lg w-auto h-[650px] object-cover"
           />

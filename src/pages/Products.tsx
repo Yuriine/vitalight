@@ -4,7 +4,8 @@ import { useProductsStore } from '../stores/products';
 import { useEffect } from 'react';
 
 export default function Products() {
-  const { category } = useLocation().state;
+  const { state } = useLocation();
+  const category = state?.category || "Untables";
   const { setActiveCategory } = useProductsStore();
   useEffect(() => {
     setActiveCategory(category);
