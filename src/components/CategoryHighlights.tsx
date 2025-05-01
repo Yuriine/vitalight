@@ -57,17 +57,17 @@ const CATEGORY_CARDS = [
     bgImage: "https://i.pinimg.com/736x/95/a7/fc/95a7fc582625d9c6449fd3c04781a89a.jpg"
   },
   {
-    title: "Ingredientes",
+    title: "Ingredientes de Cocina",
     subtitle: "Esenciales para cocina y presentación.",
     className: "col-span-2 sm:col-span-2 sm:row-span-3",
-    bgImage: "https://i.pinimg.com/736x/3d/9b/61/3d9b617901529678092c8b92a3aeb725.jpg",
+    bgImage: "https://i.pinimg.com/736x/29/37/0e/29370e86af75485d4f33644b68e040d4.jpg",
   },
 
   {
-    title: "Chocolates y Bebidas",
-    subtitle: "Delicias y bebidas naturales.",
+    title: "Dulces y Cafés",
+    subtitle: "Delicias y derivados del café.",
     className: "col-span-2 sm:col-span-2 sm:row-span-3",
-    bgImage: "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    bgImage: "https://i.pinimg.com/736x/22/c2/9a/22c29a8a954435a92919fe8b9f50ea4c.jpg",
   },
 
 ];
