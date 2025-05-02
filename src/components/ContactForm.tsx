@@ -51,17 +51,17 @@ const ContactForm: React.FC = () => {
     {
       icon: Mail,
       title: "Nuestro Email",
-      content: "grobles.dev@gmail.com"
+      content: "kataroldan@hotmail.com"
     },
     {
       icon: MapPin,
       title: "Ubicados en",
-      content: "Lima, Perú"
+      content: "Huancayo, Perú"
     },
     {
       icon: Phone,
       title: "Llámanos",
-      content: "+51 914019629"
+      content: "+51 904825206"
     }
   ];
 

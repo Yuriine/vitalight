@@ -1,8 +1,15 @@
 import type React from 'react';
 import Logo from "../assets/logo.png";
 import { Phone } from 'lucide-react';
+import { scrollToSection } from '../utils/scrollAnimation';
 
 const Footer: React.FC = () => {
+  // Función para manejar la navegación con animación de scroll
+  const handleNavClick = (id: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollToSection(id);
+  };
+
   return (
     <footer className="w-full bg-white border-t border-gray-200 pt-10 pb-6 px-4 mt-10 text-[#253d4e]">
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
@@ -23,11 +30,10 @@ const Footer: React.FC = () => {
         <div className="col-span-1">
           <h4 className="font-semibold mb-2">Navegación</h4>
           <ul className="text-sm space-y-4 mt-6">
-            <li><a href="#" className="hover:underline">Inicio</a></li>
-            <li><a href="#acerca" className="hover:underline">Acerca de</a></li>
-            <li><a href="#productos" className="hover:underline">Productos</a></li>
-            <li><a href="#categorias" className="hover:underline">Categorías</a></li>
-
+            <li><a href="#inicio" className="hover:underline" onClick={(e) => handleNavClick('inicio', e)}>Inicio</a></li>
+            <li><a href="#acerca" className="hover:underline" onClick={(e) => handleNavClick('acerca', e)}>Acerca de</a></li>
+            <li><a href="/productos" className="hover:underline">Productos</a></li>
+            <li><a href="#categorias" className="hover:underline" onClick={(e) => handleNavClick('categorias', e)}>Categorías</a></li>
           </ul>
         </div>
 

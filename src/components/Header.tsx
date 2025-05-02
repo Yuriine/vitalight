@@ -1,6 +1,6 @@
 import { Menu, ShoppingBag, TrashIcon, X } from "lucide-react";
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link, useNavigate, useLocation } from "react-router";
 import Logo from "../assets/logo.png";
 import { useCartStore } from "../stores/cart";
 import { scrollToSection } from "../utils/scrollAnimation";
@@ -17,11 +17,13 @@ const NAV_LINKS = [
 const Header: React.FC = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [cartVisible, setCartVisible] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   React.useEffect(() => {
     if (isDrawerOpen) {
       setCartVisible(false);
-      // Wait for next frame to trigger transition
       requestAnimationFrame(() => setCartVisible(true));
       document.body.classList.add("overflow-hidden");
     } else {
@@ -39,24 +41,32 @@ const Header: React.FC = () => {
 
   const { items, removeFromCart } = useCartStore();
 
-  // Función para manejar la navegación con animación de scroll
   const handleNavClick = (id: string) => {
-    scrollToSection(id);
+    if (isHomePage) {
+      scrollToSection(id);
+    } else {
+      navigate(`/#${id}`);
+    }
   };
 
   // Cierra el drawer móvil y navega a la sección
   const handleMobileNavClick = (id: string) => {
     const drawer = document.getElementById('my-drawer') as HTMLInputElement | null;
     if (drawer) drawer.checked = false;
-    scrollToSection(id);
+    
+    if (isHomePage) {
+      // Si estamos en la página principal, solo hacemos scroll
+      scrollToSection(id);
+    } else {
+      // Si estamos en otra página, navegamos a la página principal con un hash
+      navigate(`/#${id}`);
+    }
   };
-
 
   const total = items.reduce(
     (sum, item) => sum + (Number(item.price) || 0) * (Number(item.quantity) || 1),
     0
   );
-  const navigate = useNavigate();
 
   return (
     <div>
@@ -89,7 +99,11 @@ const Header: React.FC = () => {
                   <a
                     key={link.label}
                     className="btn btn-neutral btn-ghost"
-                    href={`/#${link.id}`}
+                    href={isHomePage ? `/#${link.id}` : `/#${link.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavClick(link.id);
+                    }}
                     aria-label={link.label}
                   >
                     {link.label}
@@ -198,19 +212,37 @@ const Header: React.FC = () => {
           <li className="mb-4 font-bold text-2xl text-primary">VitaLight</li>
           {NAV_LINKS.map((link) => (
             <li key={link.label}>
-              <a
-                className="text-primary text-lg font-semibold hover:bg-[#eaf8e5] focus:outline-none"
-                aria-label={link.label}
-                href={link.id.startsWith('/') ? link.id : `/#${link.id}`}
-              >
-                {link.label}
-              </a>
+              {link.id.startsWith('/') ? (
+                <Link
+                  className="text-primary text-lg font-semibold hover:bg-[#eaf8e5] focus:outline-none"
+                  to={link.id}
+                  state={{ category: "Untables" }}
+                  onClick={() => {
+                    const drawer = document.getElementById('my-drawer') as HTMLInputElement | null;
+                    if (drawer) drawer.checked = false;
+                  }}
+                  aria-label={link.label}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  className="text-primary text-lg font-semibold hover:bg-[#eaf8e5] focus:outline-none"
+                  href={isHomePage ? `/#${link.id}` : `/#${link.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleMobileNavClick(link.id);
+                  }}
+                  aria-label={link.label}
+                >
+                  {link.label}
+                </a>
+              )}
             </li>
           ))}
         </ul>
       </div>
     </div>
-
   );
 };
 
