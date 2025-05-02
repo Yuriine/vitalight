@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useNavigate } from "react-router";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { scrollToSection } from "../utils/scrollAnimation";
@@ -12,6 +12,9 @@ const SLIDE_IMAGES = [
 ];
 
 const MainBanner: React.FC = () => {
+
+  const navigate = useNavigate();
+
   return (
     <section className=" h-screen relative flex items-center justify-center overflow-hidden" data-aos="fade-up" id="inicio">
       {/* Slider como fondo absoluto */}
@@ -45,7 +48,7 @@ const MainBanner: React.FC = () => {
           <span className="uppercase mb-2 text-sm font-semibold block">Naturalmente saludable</span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-[#253d4e]">Nutre tu vida, potencia tu energía</h1>
           <button
-            onClick={() => scrollToSection('productos')}
+            onClick={() => navigate('/productos')}
             className="bg-white text-primary px-6 py-2 rounded-full font-semibold w-max transition-transform hover:scale-105"
           >Ver productos</button>
         </div>
