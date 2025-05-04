@@ -97,10 +97,10 @@ const ProductTabs: React.FC = () => {
         ) : (
           filteredProducts.map((product) => (
             <div key={product.id} className="bg-white rounded-lg p-4 flex flex-col items-center relative" data-aos="fade-up">
-              <img src="https://laticamp.com/wp-content/uploads/2024/02/tofdos-los-sabores-sin-fondo-1.1-300x300.png" alt={product.name} className="w-64 h-64 rounded mb-4" />
+              <img src={product.image} alt={product.name} className="w-64 h-64 object-contain" />
               <div className="flex flex-col items-center justify-center mb-4">
                 <span className="font-black text-xl text-[#3fbb38] ml-2">S/. {product.price.toFixed(2)}</span>
-                <span className="font-light text-xl">{product.name}</span>
+                <span className=" px-6 text-center">{product.name}</span>
                 <span className="text-sm">{product.presentation}</span>
               </div>
 

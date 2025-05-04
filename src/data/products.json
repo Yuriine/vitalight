@@ -2,330 +2,321 @@
   {
     "id": 1,
     "name": "Mantequilla de mani",
-    "price": 17.8,
+    "price": 18,
     "presentation": "500 g",
     "category": "Untables",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 2,
     "name": "Mantequilla de mani",
-    "price": 11.4,
+    "price": 11,
     "presentation": "250 g",
     "category": "Untables",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 3,
     "name": "Mantequilla de chocolate",
-    "price": 19.2,
+    "price": 19,
     "presentation": "500 g",
     "category": "Untables",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 4,
     "name": "Mantequilla de chocolate",
-    "price": 12.1,
+    "price": 12,
     "presentation": "250 g",
     "category": "Untables",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 5,
     "name": "Mermelada de Fresa",
-    "price": 11.4,
+    "price": 11,
     "presentation": "",
     "category": "Untables",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "image": "https://i.ibb.co/1fzXTmFW/fresa-removebg-preview.png"
   },
   {
     "id": 6,
     "name": "Mermelada de frutos rojos",
-    "price": 11.4,
+    "price": 11,
     "presentation": "",
     "category": "Untables",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "image": "https://i.ibb.co/YBVT3YkV/frutosrojos-removebg-preview.png"
   },
   {
     "id": 7,
     "name": "Mermelada de Mango",
-    "price": 11.4,
+    "price": 11,
     "presentation": "",
     "category": "Untables",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "image": "https://i.ibb.co/xSY5ky86/mango-removebg-preview.png"
   },
   {
     "id": 8,
     "name": "Stevia",
-    "price": 17.8,
+    "price": 40,
     "presentation": "100 uu",
     "category": "Ingredientes",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 9,
     "name": "Stevia",
-    "price": 11.4,
+    "price": 24,
     "presentation": "50 uu",
     "category": "Ingredientes",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 10,
-    "name": "Aceite de coco de",
-    "price": 12.1,
+    "name": "Aceite de coco",
+    "price": 59,
     "presentation": "850 ml",
     "category": "Aceites",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 11,
-    "name": "Aceite de oliva Extra Virgen",
-    "price": 23.5,
-    "presentation": "500 ml",
+    "name": "Aceite de coco",
+    "price": 32,
+    "presentation": "460 ml",
     "category": "Aceites",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 12,
-    "name": "Aceite de oliva Extra Virgen",
-    "price": 31.4,
-    "presentation": "750 ml",
+    "name": "Aceite de coco",
+    "price": 17,
+    "presentation": "250 ml",
     "category": "Aceites",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 13,
-    "name": "Harina de avena",
-    "price": 8.5,
-    "presentation": "500 g",
-    "category": "Ingredientes",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Aceite de oliva",
+    "price": 52,
+    "presentation": "1 lt",
+    "category": "Aceites",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 14,
-    "name": "Harina de avena",
-    "price": 16.2,
-    "presentation": "1 kg",
-    "category": "Ingredientes",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Aceite de oliva",
+    "price": 29,
+    "presentation": "500 ml",
+    "category": "Aceites",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 15,
-    "name": "Granola sabor natural",
-    "price": 20.0,
-    "presentation": "500 g",
-    "category": "Snacks",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Aceite de oliva",
+    "price": 17,
+    "presentation": "250 ml",
+    "category": "Aceites",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 16,
-    "name": "Granola sabor natural",
-    "price": 36.2,
-    "presentation": "1 kg",
-    "category": "Snacks",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Vinagre de Manzana",
+    "price": 13,
+    "presentation": "1 lt",
+    "category": "Ingredientes",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 17,
-    "name": "Sal marina",
-    "price": 2.1,
-    "presentation": "250 g",
+    "name": "Vinagre de Manzana",
+    "price": 8,
+    "presentation": "500 ml",
     "category": "Ingredientes",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "image": "https://i.ibb.co/vCy2m07V/vinagre500-removebg-preview.png"
   },
   {
     "id": 18,
-    "name": "Sal marina",
-    "price": 4.2,
-    "presentation": "500 g",
+    "name": "Avena en ojuela",
+    "price": 10,
+    "presentation": "",
     "category": "Ingredientes",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 19,
-    "name": "Cacao en polvo",
-    "price": 25.7,
-    "presentation": "250 g",
-    "category": "Dulces",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Avena Instantanea",
+    "price": 10,
+    "presentation": "",
+    "category": "Ingredientes",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 20,
-    "name": "Cacao en polvo",
-    "price": 43.5,
-    "presentation": "500 g",
-    "category": "Dulces",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Galletas mix stevia",
+    "price": 4,
+    "presentation": "",
+    "category": "Snacks",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 21,
-    "name": "Polvo de cacao y",
-    "price": 19.2,
-    "presentation": "125 g",
-    "category": "Dulces",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Rosquitas light",
+    "price": 2,
+    "presentation": "",
+    "category": "Snacks",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 22,
-    "name": "Panela granulada",
-    "price": 4.2,
-    "presentation": "250 g",
-    "category": "Ingredientes",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Crisinos",
+    "price": 3,
+    "presentation": "",
+    "category": "Snacks",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 23,
-    "name": "Panela granulada",
-    "price": 8.5,
-    "presentation": "500 g",
-    "category": "Ingredientes",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Galletas ovaladas",
+    "price": 3,
+    "presentation": "",
+    "category": "Snacks",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 24,
-    "name": "Café molido",
-    "price": 14.2,
-    "presentation": "250 g",
-    "category": "Dulces",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Galletas tipo biscotelas",
+    "price": 3,
+    "presentation": "",
+    "category": "Snacks",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 25,
-    "name": "Café molido",
-    "price": 25.7,
-    "presentation": "500 g",
-    "category": "Dulces",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Granola LINEA ZERO SEMILLA",
+    "price": 16,
+    "presentation": "",
+    "category": "Snacks",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 26,
-    "name": "Levadura seca",
-    "price": 5.7,
-    "presentation": "50 g",
-    "category": "Ingredientes",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Granola LINEA ZERO BERRIES",
+    "price": 16,
+    "presentation": "",
+    "category": "Snacks",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 27,
-    "name": "Levadura seca",
-    "price": 10.2,
-    "presentation": "100 g",
-    "category": "Ingredientes",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Granolitas light con stevia",
+    "price": 2,
+    "presentation": "30 g",
+    "category": "Snacks",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 28,
-    "name": "Vinagre de manzana",
-    "price": 6.1,
-    "presentation": "500 ml",
-    "category": "Aceites",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Almendras bañadas con chocolate sin azúcar",
+    "price": 18,
+    "presentation": "",
+    "category": "Dulces",
+    "image": "https://i.ibb.co/xS20mr8V/almendra-removebg-preview.png"
   },
   {
     "id": 29,
-    "name": "Vinagre de manzana",
-    "price": 10.2,
-    "presentation": "1 l",
-    "category": "Aceites",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Arándanos bañados con chocolate sin azúcar",
+    "price": 18,
+    "presentation": "",
+    "category": "Dulces",
+    "image": "https://i.ibb.co/4gsHG3cv/arandanosconchocolate-removebg-preview.png"
   },
   {
     "id": 30,
-    "name": "Esencia de vainilla",
-    "price": 4.2,
-    "presentation": "30 ml",
-    "category": "Ingredientes",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Maní tostado bañado con chocolate sin azúcar",
+    "price": 18,
+    "presentation": "",
+    "category": "Dulces",
+    "image": "https://i.ibb.co/V8mtP0b/man-tostado-removebg-preview.png"
   },
   {
     "id": 31,
-    "name": "Esencia de vainilla",
-    "price": 8.5,
-    "presentation": "50 ml",
-    "category": "Ingredientes",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Chocolate con lúcuma y leche 60%",
+    "price": 15,
+    "presentation": "90 g",
+    "category": "Dulces",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 32,
-    "name": "Galleta integral",
-    "price": 9.6,
-    "presentation": "200 g",
-    "category": "Snacks",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Choco stevia 99.9",
+    "price": 15,
+    "presentation": "",
+    "category": "Dulces",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 33,
-    "name": "Galleta integral",
-    "price": 15.0,
-    "presentation": "400 g",
-    "category": "Snacks",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Chocolate zero",
+    "price": 3,
+    "presentation": "",
+    "category": "Dulces",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 34,
-    "name": "Granola con frutos secos",
-    "price": 22.8,
-    "presentation": "500 g",
-    "category": "Snacks",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Licor crema de cacao sin lactosa y stevia",
+    "price": 38,
+    "presentation": "500 ml",
+    "category": "Dulces",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 35,
-    "name": "Granola con frutos secos",
-    "price": 41.2,
-    "presentation": "1 kg",
-    "category": "Snacks",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Licor crema de café sin lactosa y stevia",
+    "price": 38,
+    "presentation": "500 ml",
+    "category": "Dulces",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 36,
-    "name": "Avena instantánea",
-    "price": 10.2,
-    "presentation": "250 g",
-    "category": "Snacks",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Licor crema de moka sin lactosa y stevia",
+    "price": 38,
+    "presentation": "500 ml",
+    "category": "Dulces",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 37,
-    "name": "Avena instantánea",
-    "price": 16.2,
-    "presentation": "400 g",
-    "category": "Snacks",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Café molido",
+    "price": 21,
+    "presentation": "250 g",
+    "category": "Ingredientes",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 38,
-    "name": "Barra de chocolate",
-    "price": 7.8,
-    "presentation": "50 g",
-    "category": "Dulces",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Café en grano",
+    "price": 21,
+    "presentation": "250 g",
+    "category": "Ingredientes",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 39,
-    "name": "Barra de chocolate",
-    "price": 13.5,
-    "presentation": "100 g",
-    "category": "Dulces",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Polvo de cacao",
+    "price": 23,
+    "presentation": "200 g",
+    "category": "Ingredientes",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 40,
-    "name": "Barra de cereal",
-    "price": 4.2,
-    "presentation": "30 g",
-    "category": "Snacks",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-  },
-  {
-    "id": 41,
-    "name": "Barra de cereal",
-    "price": 8.5,
-    "presentation": "60 g",
-    "category": "Snacks",
-    "image": "https://images.pexels.com/photos/6217960/pexels-photo-6217960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "name": "Harina de almendra",
+    "price": 12,
+    "presentation": "",
+    "category": "Ingredientes",
+    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   }
-  
 ]
