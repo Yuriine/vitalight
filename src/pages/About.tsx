@@ -34,7 +34,7 @@ export default function About() {
             </span>
             <div>
               <span className="font-semibold text-gray-900">100% Producto Natural y Artesanal</span>
-              <p className="text-gray-500 text-sm">Cada artículo que encuentras en nuestra tienda ha sido elegido pensando en ti: sin aditivos, sin procesos industriales, respetando la esencia de cada ingrediente.</p>
+              <p className="text-gray-500 text-sm">Cada artículo que encuentras en nuestra tienda ha sido pensado en ti: sin aditivos, sin procesos industriales, respetando la esencia de cada ingrediente.</p>
             </div>
           </li>
           <li className="flex items-start gap-3">
