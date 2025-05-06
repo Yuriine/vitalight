@@ -163,7 +163,6 @@
     "id": 21,
     "name": "Rosquitas light",
     "price": 2.3,
-    "price": 2,
     "presentation": "",
     "category": "Snacks",
     "image": "https://i.ibb.co/1Yg8FnXm/Whats-App-Image-2025-05-01-at-7-48-31-PM-removebg-preview.png"
@@ -206,10 +205,8 @@
     "price": 15.7,
     "presentation": "",
     "category": "Snacks",
-    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
-  },
     "image": "https://i.ibb.co/3YNXGzGH/IMG-20250506-WA0002-removebg-preview.png"
-  }, 
+  },
   {
     "id": 27,
     "name": "Granolitas light con stevia",
