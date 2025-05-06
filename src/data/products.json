@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Mantequilla de mani",
-    "price": 18,
+    "price": 17.8,
     "presentation": "500 g",
     "category": "Untables",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Mantequilla de mani",
-    "price": 11,
+    "price": 11.5,
     "presentation": "250 g",
     "category": "Untables",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "name": "Mantequilla de chocolate",
-    "price": 19,
+    "price": 19.3,
     "presentation": "500 g",
     "category": "Untables",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "name": "Mantequilla de chocolate",
-    "price": 12,
+    "price": 12.5,
     "presentation": "250 g",
     "category": "Untables",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -34,7 +34,7 @@
   {
     "id": 5,
     "name": "Mermelada de Fresa",
-    "price": 11,
+    "price": 11.5,
     "presentation": "",
     "category": "Untables",
     "image": "https://i.ibb.co/1fzXTmFW/fresa-removebg-preview.png"
@@ -42,7 +42,7 @@
   {
     "id": 6,
     "name": "Mermelada de frutos rojos",
-    "price": 11,
+    "price": 11.5,
     "presentation": "",
     "category": "Untables",
     "image": "https://i.ibb.co/YBVT3YkV/frutosrojos-removebg-preview.png"
@@ -50,7 +50,7 @@
   {
     "id": 7,
     "name": "Mermelada de Mango",
-    "price": 11,
+    "price": 11.5,
     "presentation": "",
     "category": "Untables",
     "image": "https://i.ibb.co/xSY5ky86/mango-removebg-preview.png"
@@ -58,7 +58,7 @@
   {
     "id": 8,
     "name": "Stevia",
-    "price": 40,
+    "price": 39.8,
     "presentation": "100 uu",
     "category": "Ingredientes",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -66,7 +66,7 @@
   {
     "id": 9,
     "name": "Stevia",
-    "price": 24,
+    "price": 24.3,
     "presentation": "50 uu",
     "category": "Ingredientes",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -74,7 +74,7 @@
   {
     "id": 10,
     "name": "Aceite de coco",
-    "price": 59,
+    "price": 58.4,
     "presentation": "850 ml",
     "category": "Aceites",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -98,7 +98,7 @@
   {
     "id": 13,
     "name": "Aceite de oliva",
-    "price": 52,
+    "price": 51.5,
     "presentation": "1 lt",
     "category": "Aceites",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -106,7 +106,7 @@
   {
     "id": 14,
     "name": "Aceite de oliva",
-    "price": 29,
+    "price": 28.8,
     "presentation": "500 ml",
     "category": "Aceites",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -114,7 +114,7 @@
   {
     "id": 15,
     "name": "Aceite de oliva",
-    "price": 17,
+    "price": 17.4,
     "presentation": "250 ml",
     "category": "Aceites",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -122,7 +122,7 @@
   {
     "id": 16,
     "name": "Vinagre de Manzana",
-    "price": 13,
+    "price": 13.20,
     "presentation": "1 lt",
     "category": "Ingredientes",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -130,7 +130,7 @@
   {
     "id": 17,
     "name": "Vinagre de Manzana",
-    "price": 8,
+    "price": 7.9,
     "presentation": "500 ml",
     "category": "Ingredientes",
     "image": "https://i.ibb.co/vCy2m07V/vinagre500-removebg-preview.png"
@@ -139,7 +139,7 @@
     "id": 18,
     "name": "Avena en ojuela",
     "price": 10,
-    "presentation": "",
+    "presentation": "1kg",
     "category": "Ingredientes",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
@@ -147,14 +147,14 @@
     "id": 19,
     "name": "Avena Instantanea",
     "price": 10,
-    "presentation": "",
+    "presentation": "1kg",
     "category": "Ingredientes",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 20,
     "name": "Galletas mix stevia",
-    "price": 4,
+    "price": 3.7,
     "presentation": "",
     "category": "Snacks",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -162,15 +162,7 @@
   {
     "id": 21,
     "name": "Rosquitas light",
-    "price": 2,
-    "presentation": "",
-    "category": "Snacks",
-    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
-  },
-  {
-    "id": 22,
-    "name": "Crisinos",
-    "price": 3,
+    "price": 2.3,
     "presentation": "",
     "category": "Snacks",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -178,7 +170,7 @@
   {
     "id": 23,
     "name": "Galletas ovaladas",
-    "price": 3,
+    "price": 3.2,
     "presentation": "",
     "category": "Snacks",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -186,7 +178,7 @@
   {
     "id": 24,
     "name": "Galletas tipo biscotelas",
-    "price": 3,
+    "price": 2.98,
     "presentation": "",
     "category": "Snacks",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -194,7 +186,7 @@
   {
     "id": 25,
     "name": "Granola LINEA ZERO SEMILLA",
-    "price": 16,
+    "price": 15.7,
     "presentation": "",
     "category": "Snacks",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -202,7 +194,7 @@
   {
     "id": 26,
     "name": "Granola LINEA ZERO BERRIES",
-    "price": 16,
+    "price": 15.7,
     "presentation": "",
     "category": "Snacks",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -210,7 +202,7 @@
   {
     "id": 27,
     "name": "Granolitas light con stevia",
-    "price": 2,
+    "price": 2.2,
     "presentation": "30 g",
     "category": "Snacks",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -218,7 +210,7 @@
   {
     "id": 28,
     "name": "Almendras bañadas con chocolate sin azúcar",
-    "price": 18,
+    "price": 17.80,
     "presentation": "",
     "category": "Dulces",
     "image": "https://i.ibb.co/xS20mr8V/almendra-removebg-preview.png"
@@ -226,7 +218,7 @@
   {
     "id": 29,
     "name": "Arándanos bañados con chocolate sin azúcar",
-    "price": 18,
+    "price": 17.8,
     "presentation": "",
     "category": "Dulces",
     "image": "https://i.ibb.co/4gsHG3cv/arandanosconchocolate-removebg-preview.png"
@@ -234,7 +226,7 @@
   {
     "id": 30,
     "name": "Maní tostado bañado con chocolate sin azúcar",
-    "price": 18,
+    "price": 17.8,
     "presentation": "",
     "category": "Dulces",
     "image": "https://i.ibb.co/V8mtP0b/man-tostado-removebg-preview.png"
@@ -242,7 +234,7 @@
   {
     "id": 31,
     "name": "Chocolate con lúcuma y leche 60%",
-    "price": 15,
+    "price": 15.20,
     "presentation": "90 g",
     "category": "Dulces",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -250,7 +242,7 @@
   {
     "id": 32,
     "name": "Choco stevia 99.9",
-    "price": 15,
+    "price": 15.2,
     "presentation": "",
     "category": "Dulces",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -258,7 +250,7 @@
   {
     "id": 33,
     "name": "Chocolate zero",
-    "price": 3,
+    "price": 3.3,
     "presentation": "",
     "category": "Dulces",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -266,7 +258,7 @@
   {
     "id": 34,
     "name": "Licor crema de cacao sin lactosa y stevia",
-    "price": 38,
+    "price": 37.8,
     "presentation": "500 ml",
     "category": "Dulces",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -274,7 +266,7 @@
   {
     "id": 35,
     "name": "Licor crema de café sin lactosa y stevia",
-    "price": 38,
+    "price": 37.8,
     "presentation": "500 ml",
     "category": "Dulces",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -282,7 +274,7 @@
   {
     "id": 36,
     "name": "Licor crema de moka sin lactosa y stevia",
-    "price": 38,
+    "price": 37.8,
     "presentation": "500 ml",
     "category": "Dulces",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -290,7 +282,7 @@
   {
     "id": 37,
     "name": "Café molido",
-    "price": 21,
+    "price": 21.5,
     "presentation": "250 g",
     "category": "Ingredientes",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -298,7 +290,7 @@
   {
     "id": 38,
     "name": "Café en grano",
-    "price": 21,
+    "price": 21.5,
     "presentation": "250 g",
     "category": "Ingredientes",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
@@ -306,15 +298,15 @@
   {
     "id": 39,
     "name": "Polvo de cacao",
-    "price": 23,
-    "presentation": "200 g",
+    "price": 23.2,
+    "presentation": "250 g",
     "category": "Ingredientes",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 40,
     "name": "Harina de almendra",
-    "price": 12,
+    "price": 12.5,
     "presentation": "",
     "category": "Ingredientes",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
