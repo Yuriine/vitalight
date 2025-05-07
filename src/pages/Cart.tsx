@@ -99,7 +99,7 @@ const Cart: React.FC = () => {
                       <div className="flex items-center gap-2">
                         <div className="avatar">
                           <div className="w-20 h-20 rounded-xl border border-base-300 bg-base-100 md:w-24 md:h-24">
-                            <img src="https://laticamp.com/wp-content/uploads/2024/02/tofdos-los-sabores-sin-fondo-1.1-300x300.png" alt={item.name} className="object-cover" />
+                            <img src={item.image} alt={item.name} className="object-cover" />
                           </div>
                         </div>
                         <div className="flex-1 flex flex-col justify-between md:gap-2 min-w-0">
