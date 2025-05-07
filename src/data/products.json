@@ -197,17 +197,9 @@
     "price": 15.7,
     "presentation": "",
     "category": "Snacks",
-    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
-  },
-  {
-    "id": 26,
-    "name": "Granola LINEA ZERO BERRIES",
-    "price": 15.7,
-    "presentation": "",
-    "category": "Snacks",
     "image": "https://i.ibb.co/3YNXGzGH/IMG-20250506-WA0002-removebg-preview.png"
   },
-  {
+    {
     "id": 27,
     "name": "Granolitas light con stevia",
     "price": 2.2,
@@ -249,7 +241,7 @@
   },
   {
     "id": 32,
-    "name": "Choco stevia 99.9",
+    "name": "Choco stevia 99.9%",
     "price": 15.2,
     "presentation": "",
     "category": "Dulces",

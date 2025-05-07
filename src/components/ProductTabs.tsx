@@ -38,15 +38,16 @@ const ProductTabs: React.FC = () => {
     }
   }, [products, activeCategory, setActiveCategory]);
 
-  // Filter products by category and search term
+  // First filter by category
+  const productsByCategory = products.filter(
+    (product) => !activeCategory || product.category === activeCategory
+  );
+
+  // Then filter by search term
   const filteredProducts = products.filter(
     (product) =>
-      product.category === activeCategory &&
-      (
-        product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.name.toUpperCase().includes(searchTerm.toUpperCase())
-
-      )
+      product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.name.toUpperCase().includes(searchTerm.toUpperCase())
   );
 
   const formatCategoryName = (category: string) => {
@@ -92,10 +93,12 @@ const ProductTabs: React.FC = () => {
           <div className="col-span-full text-center text-lg">Cargando productos...</div>
         ) : error ? (
           <div className="col-span-full text-center text-red-500">Error: {error}</div>
-        ) : filteredProducts.length === 0 ? (
-          <div className="col-span-full text-center text-[#253d4e] text-lg">No hay productos en esta categoría.</div>
+        ) : (searchTerm ? filteredProducts : productsByCategory).length === 0 ? (
+          <div className="col-span-full text-center text-[#253d4e] text-lg">
+            {searchTerm ? 'No se encontraron productos que coincidan con la búsqueda.' : 'No hay productos en esta categoría.'}
+          </div>
         ) : (
-          filteredProducts.map((product) => (
+          (searchTerm ? filteredProducts : productsByCategory).map((product) => (
             <div key={product.id} className="bg-white rounded-lg p-4 flex flex-col items-center relative" data-aos="fade-up">
               <img src={product.image} alt={product.name} className="w-64 h-64 object-contain" />
               <div className="flex flex-col items-center justify-center mb-4">
