@@ -1,0 +1,33 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Project Structure Guide
+
+This is a React + Vite project using Bun as the package manager. Here's the main structure:
+
+- `src/` - Main source code directory
+  - `assets/` - Static assets like images and fonts
+  - `components/` - Reusable React components
+  - `data/` - Data files and constants
+  - `pages/` - Page components and routes
+  - `stores/` - Zustand state management stores
+  - `utils/` - Utility functions and helpers
+  - `main.tsx` - Application entry point
+  - `index.css` - Global styles
+
+Key configuration files:
+- [package.json](mdc:package.json) - Project dependencies and scripts
+- [vite.config.ts](mdc:vite.config.ts) - Vite configuration
+- [tailwind.config.js](mdc:tailwind.config.js) - Tailwind CSS configuration
+- [tsconfig.json](mdc:tsconfig.json) - TypeScript configuration
+- [biome.json](mdc:biome.json) - Biome (linter/formatter) configuration
+
+## Development Workflow
+
+1. Use `bun dev` to start the development server
+2. Use `bun run lint` to run linting
+3. Use `bun run format` to format code
+4. Use `bun run build` to create a production build
+

@@ -1,0 +1,65 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Development Tools & Setup
+
+## Required Tools
+
+- [Bun](mdc:https:/bun.sh) - Package manager and runtime
+- [Node.js](mdc:https:/nodejs.org) - Required for some development tools
+- [VS Code](mdc:https:/code.visualstudio.com) - Recommended IDE
+
+## VS Code Extensions
+
+Recommended extensions for development:
+- ESLint
+- Prettier
+- Tailwind CSS IntelliSense
+- TypeScript and JavaScript Language Features
+- Error Lens
+- GitLens
+
+## Development Scripts
+
+Available scripts in [package.json](mdc:package.json):
+
+```bash
+bun dev          # Start development server
+bun run build    # Create production build
+bun run lint     # Run linting
+bun run format   # Format code
+bun run preview  # Preview production build
+```
+
+## Environment Setup
+
+1. Install dependencies:
+   ```bash
+   bun install
+   ```
+
+2. Start development server:
+   ```bash
+   bun dev
+   ```
+
+3. Access the application at `http://localhost:5173`
+
+## Code Quality Tools
+
+- **Biome**: Used for linting and formatting
+  - Configuration in [biome.json](mdc:biome.json)
+  - Run with `bun run lint` and `bun run format`
+
+- **TypeScript**: For type checking
+  - Configuration in [tsconfig.json](mdc:tsconfig.json)
+  - Run type checking with `bun run lint`
+
+## Build & Deployment
+
+- Production builds are created with `bun run build`
+- Output is generated in the `dist` directory
+- Configured for Netlify deployment via [netlify.toml](mdc:netlify.toml)
+

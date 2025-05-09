@@ -1,0 +1,49 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Coding Standards
+
+## TypeScript & React
+
+- Use TypeScript for all new files
+- Use functional components with hooks
+- Define proper types for props and state
+- Use proper naming conventions:
+  - Components: PascalCase (e.g., `Button.tsx`)
+  - Utilities: camelCase (e.g., `formatDate.ts`)
+  - Constants: UPPER_SNAKE_CASE
+
+## Styling
+
+- Use Tailwind CSS for styling
+- Follow the utility-first approach
+- Use DaisyUI components when available
+- Keep custom CSS to a minimum
+- Use CSS modules for component-specific styles
+
+## State Management
+
+- Use Zustand for global state management
+- Keep stores in the `src/stores` directory
+- Use local state for component-specific state
+- Follow the store naming convention: `use[StoreName]Store`
+
+## Code Quality
+
+- Run `bun run lint` before committing
+- Run `bun run format` to maintain consistent formatting
+- Write meaningful commit messages
+- Keep components small and focused
+- Use proper error handling
+- Add comments for complex logic
+
+## Performance
+
+- Use React.memo for expensive components
+- Implement proper loading states
+- Optimize images and assets
+- Use proper lazy loading for routes
+- Implement proper error boundaries
+
