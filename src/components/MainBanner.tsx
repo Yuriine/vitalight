@@ -3,9 +3,9 @@ import { useNavigate } from "react-router";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { scrollToSection } from "../utils/scrollAnimation";
-import Banner1 from "../assets/banner1.png"
-import Banner2 from "../assets/banner2.png"
-import Banner3 from "../assets/banner3.png"
+import Banner1 from "../assets/banner1.jpg"
+import Banner2 from "../assets/banner2.jpg"
+import Banner3 from "../assets/banner3.jpg"
 
 const SLIDE_IMAGES = [
   Banner1, 
