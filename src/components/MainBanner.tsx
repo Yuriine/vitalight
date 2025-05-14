@@ -3,12 +3,14 @@ import { useNavigate } from "react-router";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { scrollToSection } from "../utils/scrollAnimation";
+import Banner1 from "../assets/banner1.png"
+import Banner2 from "../assets/banner2.png"
+import Banner3 from "../assets/banner3.png"
 
 const SLIDE_IMAGES = [
-  "https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Mantequilla de maní
-  "https://images.pexels.com/photos/260405/pexels-photo-260405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Granola
-  "https://images.pexels.com/photos/1611560/pexels-photo-1611560.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Aceite de oliva
-  "https://images.pexels.com/photos/2555637/pexels-photo-2555637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Vinagre
+  Banner1, 
+  Banner2, 
+  Banner3,
 ];
 
 const MainBanner: React.FC = () => {
