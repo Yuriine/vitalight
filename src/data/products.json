@@ -1,19 +1,19 @@
 [
   {
     "id": 1,
-    "name": "Mantequilla de mani",
+    "name": "Mantequilla de mani con cacao",
     "price": 17.8,
     "presentation": "500 g",
     "category": "Untables",
-    "image": "https://i.ibb.co/JPs9LSK/IMG-20250506-WA0003-removebg-preview-1.png"
+    "image": "https://i.ibb.co/fzdx74Jf/Whats-App-Image-2025-05-13-at-7-48-23-PM-removebg-preview.png"
   },
   {
     "id": 2,
-    "name": "Mantequilla de mani",
+    "name": "Mantequilla de mani con cacao",
     "price": 11.5,
-    "presentation": "250 g",
+    "presentation": "230 g",
     "category": "Untables",
-    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
+    "image": "https://i.ibb.co/23RyRkB2/Whats-App-Image-2025-05-13-at-7-47-11-PM-removebg-preview.png"
   },
   {
     "id": 3,
@@ -61,7 +61,7 @@
     "price": 39.8,
     "presentation": "100 uu",
     "category": "Ingredientes",
-    "image": "https://i.ibb.co/cKR5ZQmD/Whats-App-Image-2025-04-25-at-4-40-38-PM-1-removebg-preview.png"
+    "image": "https://i.ibb.co/tMJSR1wL/Whats-App-Image-2025-05-13-at-9-40-07-AM-1-removebg-preview.png"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "price": 24.3,
     "presentation": "50 uu",
     "category": "Ingredientes",
-    "image": "https://i.ibb.co/cKR5ZQmD/Whats-App-Image-2025-04-25-at-4-40-38-PM-1-removebg-preview.png"
+    "image": "https://i.ibb.co/RGZshtwP/Whats-App-Image-2025-05-13-at-9-40-07-AM-removebg-preview.png"
   },
   {
     "id": 10,
@@ -101,7 +101,7 @@
     "price": 51.5,
     "presentation": "1 lt",
     "category": "Aceites",
-    "image": "https://i.ibb.co/svdQ5SYg/IMG-20250506-WA0005-removebg-preview.png"
+    "image": "https://i.ibb.co/6Jb9J2rm/Whats-App-Image-2025-05-13-at-8-05-58-PM-removebg-preview.png"
   },
   {
     "id": 14,
@@ -117,7 +117,7 @@
     "price": 17.4,
     "presentation": "250 ml",
     "category": "Aceites",
-    "image": "https://i.ibb.co/N6W85khj/IMG-20250506-WA0006-removebg-preview.png"
+    "image": "https://i.ibb.co/TM6kpQt5/Whats-App-Image-2025-05-13-at-8-06-20-PM-removebg-preview.png"
   },
   {
     "id": 16,
@@ -142,14 +142,6 @@
     "presentation": "1kg",
     "category": "Ingredientes",
     "image": "https://i.ibb.co/gbtgpDCs/Whats-App-Image-2025-05-01-at-7-48-27-PM-removebg-preview.png"
-  },
-  {
-    "id": 19,
-    "name": "Avena Instantanea",
-    "price": 10,
-    "presentation": "1kg",
-    "category": "Ingredientes",
-    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
     "id": 20,
@@ -189,7 +181,7 @@
     "price": 2.98,
     "presentation": "",
     "category": "Snacks",
-    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
+    "image": "https://i.ibb.co/bwcW4yq/Whats-App-Image-2025-05-01-at-7-48-28-PM-removebg-preview.png"
   },
   {
     "id": 25,
@@ -241,11 +233,11 @@
   },
   {
     "id": 32,
-    "name": "Choco stevia 99.9%",
+    "name": "Chocolate con stevia 99.9%",
     "price": 15.2,
     "presentation": "",
     "category": "Dulces",
-    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
+    "image": "https://i.ibb.co/jP38VthN/Whats-App-Image-2025-05-13-at-7-56-38-PM-removebg-preview.png"
   },
   {
     "id": 33,
@@ -261,7 +253,7 @@
     "price": 37.8,
     "presentation": "500 ml",
     "category": "Dulces",
-    "image": "https://i.ibb.co/hRsjvsD6/Whats-App-Image-2025-04-25-at-4-40-34-PM-removebg-preview.png"
+    "image": "https://i.ibb.co/0VKLK65c/Whats-App-Image-2025-05-13-at-9-40-08-AM-3-removebg-preview.png"
   },
   {
     "id": 35,
@@ -269,15 +261,15 @@
     "price": 37.8,
     "presentation": "500 ml",
     "category": "Dulces",
-    "image": "https://i.ibb.co/hRsjvsD6/Whats-App-Image-2025-04-25-at-4-40-34-PM-removebg-preview.png"
+    "image": "https://i.ibb.co/ZphYyJPs/Whats-App-Image-2025-05-13-at-9-40-08-AM-1-removebg-preview.png"
   },
   {
     "id": 36,
-    "name": "Licor crema de moka sin lactosa y stevia",
+    "name": "Licor crema de mocha sin lactosa y stevia",
     "price": 37.8,
     "presentation": "500 ml",
     "category": "Dulces",
-    "image": "https://i.ibb.co/hRsjvsD6/Whats-App-Image-2025-04-25-at-4-40-34-PM-removebg-preview.png"
+    "image": "https://i.ibb.co/gF7PFRjD/Whats-App-Image-2025-05-13-at-9-40-07-AM-2-removebg-preview.png"
   },
   {
     "id": 37,
@@ -310,5 +302,45 @@
     "presentation": "",
     "category": "Ingredientes",
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
+  },
+  {
+    "id": 41,
+    "name": "Mantequilla de mani con sal de maray",
+    "price": 11.5,
+    "presentation": "230 g",
+    "category": "Untables",
+    "image": "https://i.ibb.co/QvdKsJD5/Whats-App-Image-2025-05-13-at-7-47-46-PM-removebg-preview.png"
+  },
+  {
+    "id": 42,
+    "name": "Aguaymanto bañados con chocolate 99% cacao",
+    "price": 17.8,
+    "presentation": "",
+    "category": "Dulces",
+    "image": "https://i.ibb.co/kV2CyqsK/Whats-App-Image-2025-05-13-at-7-33-18-PM-2-removebg-preview.png"
+  },
+  {
+    "id": 43,
+    "name": "Piña bañada con chocolate 99% cacao",
+    "price": 17.8,
+    "presentation": "",
+    "category": "Dulces",
+    "image": "https://i.ibb.co/q3wdmGHD/Whats-App-Image-2025-05-13-at-7-33-18-PM-removebg-preview.png"
+  },
+  {
+    "id": 44,
+    "name": "Pecanas bañadas con chocolate 99% cacao",
+    "price": 17.8,
+    "presentation": "",
+    "category": "Dulces",
+    "image": "https://i.ibb.co/mFYR6Grc/Whats-App-Image-2025-05-13-at-7-33-18-PM-1-removebg-preview.png"
+  },
+  {
+    "id": 45,
+    "name": "Pasta de cacao criollo",
+    "price": 1,
+    "presentation": "100 g",
+    "category": "Dulces",
+    "image": "https://i.ibb.co/jZrpv13j/Whats-App-Image-2025-05-13-at-7-33-17-PM-removebg-preview.png"
   }
 ]
