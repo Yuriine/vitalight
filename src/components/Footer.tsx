@@ -15,12 +15,12 @@ const Footer: React.FC = () => {
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Logo y contacto */}
         <div className="flex flex-col items-center md:items-start mb-10 md:mb-0 col-span-1">
-          <img src={Logo} alt="Logo Linea Zero" className="w-28 h-auto mb-2" />
+          <img src={Logo} alt="Logo" className="w-28 h-auto mb-2" />
           <span className="text-xl tracking-wide text-green-700 font-bold">VitaLight</span>
           <div className="mt-4 flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <Phone color='green' size={18} />
-              <span className="text-sm">904 825 206</span>
+              <span className="text-sm">901 641 252</span>
             </div>
 
           </div>
