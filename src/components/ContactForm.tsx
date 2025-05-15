@@ -25,7 +25,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ icon: Icon, title, content })
 
 // Función para formatear el mensaje de WhatsApp
 const formatWhatsappMessage = (name: string, email: string, message: string): string => {
-  const phoneNumber = "51914019629"; // Número de VitaLight (sin +)
+  const phoneNumber = "51901641252"; // Número de VitaLight (sin +)
   const formattedMessage = 
     `¡Hola VitaLight!%0A%0A` +
     `Me contacto a través de su formulario web:%0A` +
@@ -51,7 +51,7 @@ const ContactForm: React.FC = () => {
     {
       icon: Mail,
       title: "Nuestro Email",
-      content: "kataroldan@hotmail.com"
+      content: "vitalightienda@gmail.com"
     },
     {
       icon: MapPin,
@@ -61,7 +61,7 @@ const ContactForm: React.FC = () => {
     {
       icon: Phone,
       title: "Llámanos",
-      content: "+51 904825206"
+      content: "+51 901641252"
     }
   ];
 
