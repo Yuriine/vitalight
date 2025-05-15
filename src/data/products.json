@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Mantequilla de mani con cacao",
-    "price": 17.8,
+    "price": 19.3,
     "presentation": "500 g",
     "category": "Untables",
     "image": "https://i.ibb.co/fzdx74Jf/Whats-App-Image-2025-05-13-at-7-48-23-PM-removebg-preview.png"
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Mantequilla de mani con cacao",
-    "price": 11.5,
+    "price": 12.2,
     "presentation": "230 g",
     "category": "Untables",
     "image": "https://i.ibb.co/23RyRkB2/Whats-App-Image-2025-05-13-at-7-47-11-PM-removebg-preview.png"
@@ -272,12 +272,20 @@
     "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
   },
   {
-    "id": 41,
+    "id": 3,
     "name": "Mantequilla de mani con sal de maray",
     "price": 11.5,
     "presentation": "230 g",
     "category": "Untables",
     "image": "https://i.ibb.co/QvdKsJD5/Whats-App-Image-2025-05-13-at-7-47-46-PM-removebg-preview.png"
+  },
+  {
+    "id": 4,
+    "name": "Mantequilla de mani con sal de maray",
+    "price": 17.8,
+    "presentation": "500 g",
+    "category": "Untables",
+    "image": "https://i.ibb.co/JPs9LSK/IMG-20250506-WA0003-removebg-preview-1.png"
   },
   {
     "id": 42,
