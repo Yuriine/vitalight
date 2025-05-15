@@ -81,7 +81,7 @@ const Header: React.FC = () => {
             >
               <Menu className="w-7 h-7 text-primary" />
             </label>
-            <img src={Logo} alt="Logo" className="w-14 h-14 md:w-20 md:h-20 " />
+            <img onClick={()=>navigate("/")} src={Logo} alt="Logo" className="w-14 h-14 md:w-20 md:h-20 " />
 
             <div className="hidden md:flex gap-4 items-center">
               {NAV_LINKS.map((link) => (
