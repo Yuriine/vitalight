@@ -16,22 +16,6 @@
     "image": "https://i.ibb.co/23RyRkB2/Whats-App-Image-2025-05-13-at-7-47-11-PM-removebg-preview.png"
   },
   {
-    "id": 3,
-    "name": "Mantequilla de chocolate",
-    "price": 19.3,
-    "presentation": "500 g",
-    "category": "Untables",
-    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
-  },
-  {
-    "id": 4,
-    "name": "Mantequilla de chocolate",
-    "price": 12.5,
-    "presentation": "250 g",
-    "category": "Untables",
-    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
-  },
-  {
     "id": 5,
     "name": "Mermelada de Fresa",
     "price": 11.5,
