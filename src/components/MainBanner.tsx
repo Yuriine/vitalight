@@ -2,23 +2,18 @@ import React from "react";
 import { useNavigate } from "react-router";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import { scrollToSection } from "../utils/scrollAnimation";
-import Banner1 from "../assets/banner1.jpg"
-import Banner2 from "../assets/banner2.jpg"
-import Banner3 from "../assets/banner3.jpg"
-
-const SLIDE_IMAGES = [
-  Banner1, 
-  Banner2, 
-  Banner3,
-];
+import Banner1 from "../assets/banner1.png";
+import Banner2 from "../assets/banner2.jpg";
+import Banner3 from "../assets/banner3.jpg";
+import MobileBanner1 from "../assets/mobile-banner1.png";
 
 const MainBanner: React.FC = () => {
-
+  const width = window.innerWidth;
+  const isMobile = width < 768;
   const navigate = useNavigate();
 
   return (
-    <section className=" h-screen relative flex items-center justify-center overflow-hidden" data-aos="fade-up" id="inicio">
+    <section className=" h-screen relative flex md:items-center items-end justify-center overflow-hidden" data-aos="fade-up" id="inicio">
       {/* Slider como fondo absoluto */}
       <div className="absolute inset-0 w-full h-full z-0">
         <Slide
@@ -29,7 +24,11 @@ const MainBanner: React.FC = () => {
           arrows={false}
           cssClass="w-full h-full"
         >
-          {SLIDE_IMAGES.map((url, idx) => (
+          {[
+            isMobile ? MobileBanner1 : Banner1,
+            Banner2,
+            Banner3
+          ].map((url, idx) => (
             <div key={idx} className="w-full h-full">
               <img
                 src={url}
