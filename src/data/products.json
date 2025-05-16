@@ -318,5 +318,13 @@
     "presentation": "100 g",
     "category": "Dulces",
     "image": "https://i.ibb.co/jZrpv13j/Whats-App-Image-2025-05-13-at-7-33-17-PM-removebg-preview.png"
+  },
+   {
+    "id": 46,
+    "name": "Chocolate con (pecanas, piña, dátiles, arándanos, stevia, aguaymanto)",
+    "price": 14.2,
+    "presentation": "50g x 1 caja",
+    "category": "Dulces",
+    "image": "https://i.ibb.co/TBZbrWtB/image-removebg-preview.png"
   }
 ]
