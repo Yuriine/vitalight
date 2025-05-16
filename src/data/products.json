@@ -42,7 +42,7 @@
   {
     "id": 8,
     "name": "Stevia",
-    "price": 39.8,
+    "price": 28,
     "presentation": "100 uu",
     "category": "Ingredientes",
     "image": "https://i.ibb.co/tMJSR1wL/Whats-App-Image-2025-05-13-at-9-40-07-AM-1-removebg-preview.png"
@@ -50,7 +50,7 @@
   {
     "id": 9,
     "name": "Stevia",
-    "price": 24.3,
+    "price": 17,
     "presentation": "50 uu",
     "category": "Ingredientes",
     "image": "https://i.ibb.co/RGZshtwP/Whats-App-Image-2025-05-13-at-9-40-07-AM-removebg-preview.png"
@@ -258,7 +258,7 @@
   {
     "id": 39,
     "name": "Polvo de cacao",
-    "price": 23.2,
+    "price": 20,
     "presentation": "250 g",
     "category": "Ingredientes",
     "image": "https://i.ibb.co/qY10ck6F/Whats-App-Image-2025-05-01-at-7-48-35-PM-removebg-preview.png"
