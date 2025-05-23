@@ -145,11 +145,11 @@
   },
   {
     "id": 23,
-    "name": "Galletas ovaladas",
-    "price": 3.2,
+    "name": "Galletas de Coco con Miel",
+    "price": 3.8,
     "presentation": "",
     "category": "Snacks",
-    "image": "https://i.ibb.co/ZpmB6wTd/Whats-App-Image-2025-05-01-at-7-48-30-PM-removebg-preview.png"
+    "image": "https://i.ibb.co/LdGT2t04/IMG-5450.png"
   },
   {
     "id": 24,
@@ -269,7 +269,7 @@
     "price": 12.5,
     "presentation": "",
     "category": "Ingredientes",
-    "image": "https://img.icons8.com/?size=400&id=1gUuorsw51c9&format=png&color=0000001"
+    "image": "https://i.ibb.co/Q3grTwXs/IMG-5451.png"
   },
   {
     "id": 3,
@@ -326,5 +326,13 @@
     "presentation": "50 g x 1 unidad",
     "category": "Dulces",
     "image": "https://i.ibb.co/TBZbrWtB/image-removebg-preview.png"
+  },
+  {
+    "id": 47,
+    "name": "Galletas de Zanahoria con Naranja",
+    "price": 3.8,
+    "presentation": "",
+    "category": "Snacks",
+    "image": "https://i.ibb.co/P2nts5j/IMG-5449.png"
   }
 ]
