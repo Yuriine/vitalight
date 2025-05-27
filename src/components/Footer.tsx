@@ -1,6 +1,6 @@
 import type React from 'react';
 import Logo from "../assets/logo.png";
-import { Phone } from 'lucide-react';
+import { Phone, CreditCard } from 'lucide-react';
 import { scrollToSection } from '../utils/scrollAnimation';
 
 const Footer: React.FC = () => {
@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="w-full bg-white border-t border-gray-200 pt-10 pb-6 px-4 mt-10 text-[#253d4e]">
-      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
         {/* Logo y contacto */}
         <div className="flex flex-col items-center md:items-start mb-10 md:mb-0 col-span-1">
           <img src={Logo} alt="Logo" className="w-28 h-auto mb-2" />
@@ -22,7 +22,6 @@ const Footer: React.FC = () => {
               <Phone color='green' size={18} />
               <span className="text-sm">901 641 252</span>
             </div>
-
           </div>
         </div>
 
@@ -40,13 +39,37 @@ const Footer: React.FC = () => {
         {/* Redes sociales */}
         <div className="col-span-1 flex flex-col items-start gap-2">
           <h4 className="font-semibold mb-2">Redes Sociales</h4>
-          <div className="flex gap-3">
-            <a href="#" aria-label="Facebook" className="hover:opacity-70">
+          <div className="flex gap-3 mt-6">
+            <a href="https://www.facebook.com/people/VitaLight/61576756075615/?sk=about" aria-label="Facebook" className="hover:opacity-70">
               <img src="https://img.icons8.com/?size=100&id=118466&format=png&color=12B886" className="w-6 h-6" />
             </a>
-            <a href="#" aria-label="Instagram" className="hover:opacity-70">
+            <a href="https://www.instagram.com/vitalightienda/" aria-label="Instagram" className="hover:opacity-70">
               <img src="https://img.icons8.com/?size=100&id=32292&format=png&color=12B886" className="w-6 h-6" />
             </a>
+          </div>
+        </div>
+
+        {/* Métodos de pago */}
+        <div className="col-span-1 flex flex-col items-start gap-2">
+          <h4 className="font-semibold mb-2">Métodos de Pago</h4>
+          <div className="mt-6 flex flex-col gap-3">
+            <div className="flex items-center gap-2">
+              <img src="https://ingenieriacivilyconstruccion.com/wp-content/uploads/2024/12/Icono-1.png" alt="BCP" className='w-6 h-6 rounded-md' />
+              <span className="text-sm">BCP (Banco de Crédito del Perú)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <img src="https://logosenvector.com/logo/img/yape-37283.png" alt="Yape" className='w-5 h-5' />
+              <span className='text-sm'>Yape</span>
+            </div>
+            <div className='flex items-center gap-2'>
+              <img src="https://marketing-peru.beglobal.biz/wp-content/uploads/2024/09/logo-plin-fondo-transparente.png" alt="Plin" className='w-5 h-5' />
+              <span className='text-sm'>Plin</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfOVBMZKttzqH3jXr8J3hoJMS5_3sdPfS5wA&s" alt="Caja Huancayo" className='w-5 h-5 rounded-md' />
+              <span className='text-sm'>Caja Huancayo</span>
+            </div>
+            <p className="text-xs text-gray-600 mt-2">Razón Social: VitaLight S.A.C. - RUT: <span className='font-bold'>15614072293</span></p>
           </div>
         </div>
       </div>
