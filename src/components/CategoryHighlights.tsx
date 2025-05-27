@@ -6,6 +6,8 @@ interface CategoryCardProps {
   subtitle: string;
   className?: string;
   bgImage: string;
+  aosAnimation?: string;
+  aosDelay?: number;
 }
 
 const CategoryCard: React.FC<CategoryCardProps> = ({
@@ -13,6 +15,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   subtitle,
   className = '',
   bgImage,
+  aosAnimation = "fade-up",
+  aosDelay = 0,
 }) => (
 
   <Link
@@ -20,6 +24,9 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
     to="/productos" state={{ category: title }}
     tabIndex={0}
     aria-label={title}
+    data-aos={aosAnimation}
+    data-aos-delay={aosDelay}
+    data-aos-duration="600"
   >
     {/* Imagen de fondo */}
     <img
@@ -47,24 +54,32 @@ const CATEGORY_CARDS = [
     subtitle: "Gourmet y saludables para tu cocina.",
     className: "col-span-2 sm:col-span-2 sm:row-span-6",
     bgImage: "https://i.pinimg.com/736x/fc/dd/4f/fcdd4f839faf4d3fe5c22e3980d4b868.jpg",
+    aosAnimation: "fade-right",
+    aosDelay: 100,
   },
   {
     title: "Untables",
     subtitle: "Sabores naturales para untar y disfrutar.",
     className: "col-span-2 sm:col-span-1 sm:row-span-6",
-    bgImage: "https://i.pinimg.com/736x/52/18/56/521856dec6c9fe9b78435093f07ad521.jpg"
+    bgImage: "https://i.pinimg.com/736x/52/18/56/521856dec6c9fe9b78435093f07ad521.jpg",
+    aosAnimation: "fade-up",
+    aosDelay: 200,
   },
   {
     title: "Snacks",
     subtitle: "Desayunos y antojos nutritivos.",
     className: "col-span-2 sm:col-span-1 sm:row-span-6",
-    bgImage: "https://i.pinimg.com/736x/95/a7/fc/95a7fc582625d9c6449fd3c04781a89a.jpg"
+    bgImage: "https://i.pinimg.com/736x/95/a7/fc/95a7fc582625d9c6449fd3c04781a89a.jpg",
+    aosAnimation: "fade-left",
+    aosDelay: 300,
   },
   {
     title: "Ingredientes",
     subtitle: "Esenciales para cocina y presentación.",
     className: "col-span-2 sm:col-span-2 sm:row-span-3",
     bgImage: "https://i.pinimg.com/736x/29/37/0e/29370e86af75485d4f33644b68e040d4.jpg",
+    aosAnimation: "fade-up",
+    aosDelay: 400,
   },
 
   {
@@ -72,6 +87,8 @@ const CATEGORY_CARDS = [
     subtitle: "Delicias de chocolate y derivados del café.",
     className: "col-span-2 sm:col-span-2 sm:row-span-3",
     bgImage: "https://i.pinimg.com/736x/34/c2/e8/34c2e84935f6be74625c23cdd306daab.jpg",
+    aosAnimation: "fade-up",
+    aosDelay: 500,
   },
 
 ];
@@ -80,8 +97,7 @@ const CATEGORY_CARDS = [
 const CategoryHighlights: React.FC = () => (
   <section id="categorias" className="flex flex-col w-full items-center md:py-28 justify-center py-28 sm:p-2 md:p-3"
     data-aos="fade-up"
-    data-aos-delay="200"
-    data-aos-duration="500"
+    data-aos-delay="300"
   >
     <div className="mb-10">
       <h2 className="text-2xl md:text-5xl text-center font-bold text-primary leading-tight mb-2"> Categorías</h2>
@@ -95,6 +111,8 @@ const CategoryHighlights: React.FC = () => (
           subtitle={cat.subtitle}
           className={cat.className}
           bgImage={cat.bgImage}
+          aosAnimation={cat.aosAnimation}
+          aosDelay={cat.aosDelay}
         />
       ))}
     </div>

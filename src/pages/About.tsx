@@ -8,7 +8,6 @@ export default function About() {
         className="md:w-1/2 w-full flex flex-col gap-6 md:pr-12"
         data-aos="fade-up"
         data-aos-delay="200"
-        data-aos-duration="500"
       >
         <span className="text-primary font-semibold text-xs tracking-widest uppercase">Ofrecemos</span>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">

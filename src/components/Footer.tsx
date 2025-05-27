@@ -12,7 +12,10 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="w-full bg-white border-t border-gray-200 pt-10 pb-6 px-4 mt-10 text-[#253d4e]">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
         {/* Logo y contacto */}
         <div className="flex flex-col items-center md:items-start mb-10 md:mb-0 col-span-1">
           <img src={Logo} alt="Logo" className="w-28 h-auto mb-2" />
@@ -73,7 +76,10 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <p className="text-xs text-center text-green-700 mt-16 opacity-80">© 2025 VitaLight. Todos los derechos reservados.</p>
+      <p className="text-xs text-center text-green-700 mt-16 opacity-80"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >© 2025 VitaLight. Todos los derechos reservados.</p>
       <p className="text-xs text-center text-green-700 mt-16 opacity-80">Sitio desarrollado por <a href="https://grobles.framer.website" target="_blank" rel="noopener noreferrer" className='underline text-black'>Grobles</a>.</p>
     </footer>
   );
