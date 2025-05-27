@@ -70,7 +70,7 @@ const CATEGORY_CARDS = [
     subtitle: "Desayunos y antojos nutritivos.",
     className: "col-span-2 sm:col-span-1 sm:row-span-6",
     bgImage: "https://i.pinimg.com/736x/95/a7/fc/95a7fc582625d9c6449fd3c04781a89a.jpg",
-    aosAnimation: "fade-left",
+    aosAnimation: "fade-right",
     aosDelay: 300,
   },
   {
@@ -87,7 +87,7 @@ const CATEGORY_CARDS = [
     subtitle: "Delicias de chocolate y derivados del café.",
     className: "col-span-2 sm:col-span-2 sm:row-span-3",
     bgImage: "https://i.pinimg.com/736x/34/c2/e8/34c2e84935f6be74625c23cdd306daab.jpg",
-    aosAnimation: "fade-up",
+    aosAnimation: "fade-right",
     aosDelay: 500,
   },
 
