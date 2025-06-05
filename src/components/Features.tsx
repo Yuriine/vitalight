@@ -46,15 +46,13 @@ const Features: React.FC = () => {
   ];
 
   return (
-    <section className="w-full flex flex-wrap justify-center gap-6 px-4 py-40 relative">
-      <div className="absolute inset-0 w-full h-full">
-        <img
-          src="https://images.unsplash.com/photo-1483137140003-ae073b395549?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="background"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/30" />
-      </div>
+    <section 
+      className="w-full flex flex-wrap justify-center gap-6 px-4 py-40 relative bg-fixed bg-center bg-cover"
+      style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1483137140003-ae073b395549?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
+      }}
+    >
+      <div className="absolute inset-0 bg-black/30" />
       <div className="relative z-10 flex flex-wrap justify-center gap-6 w-full">
         {featuresData.map((feature, index) => (
           <FeatureCard
