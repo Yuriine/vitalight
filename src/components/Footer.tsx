@@ -43,10 +43,10 @@ const Footer: React.FC = () => {
         <div className="col-span-1 flex flex-col items-start gap-2">
           <h4 className="font-semibold mb-2">Redes Sociales</h4>
           <div className="flex gap-3 mt-6">
-            <a href="https://www.facebook.com/people/VitaLight/61576756075615/?sk=about" aria-label="Facebook" className="hover:opacity-70">
+            <a href="https://www.facebook.com/people/VitaLight/61576756075615/?sk=about" id='uso_facebook_link' aria-label="Facebook" className="hover:opacity-70">
               <img src="https://img.icons8.com/?size=100&id=118466&format=png&color=12B886" className="w-6 h-6" />
             </a>
-            <a href="https://www.instagram.com/vitalightienda/" aria-label="Instagram" className="hover:opacity-70">
+            <a href="https://www.instagram.com/vitalightienda/" aria-label="Instagram" id='uso_instagram_link' className="hover:opacity-70">
               <img src="https://img.icons8.com/?size=100&id=32292&format=png&color=12B886" className="w-6 h-6" />
             </a>
           </div>

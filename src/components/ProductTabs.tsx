@@ -21,7 +21,15 @@ const ProductTabs: React.FC = () => {
   };
 
 
-
+const generarIdDesdeNombre = (name: string): string => {
+  return name
+    .toLowerCase()
+    .normalize("NFD") // elimina tildes
+    .replace(/[\u0300-\u036f]/g, "") // limpia tildes residuales
+    .replace(/[^a-z0-9\s]/g, "") // elimina símbolos raros
+    .trim()
+    .replace(/\s+/g, "_"); // espacios por _
+};
 
   useEffect(() => {
     fetchProducts();
@@ -109,6 +117,9 @@ const ProductTabs: React.FC = () => {
 
               <button
                 className="btn btn-success rounded-xl"
+                data-product-id={generarIdDesdeNombre(product.name)}
+                data-event="agregar_al_carrito"
+                id={generarIdDesdeNombre(product.name)}
                 onClick={() => handleAddToCart(product)}
                 aria-label={`Agregar ${product.name} al carrito`}
               >

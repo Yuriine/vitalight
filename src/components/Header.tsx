@@ -168,7 +168,7 @@ const Header: React.FC = () => {
                         <span className="font-bold text-lg text-[#222]">S/. {item.price.toFixed(2)}</span>
                       </div>
 
-                      <button className="btn btn-circle btn-error" onClick={() => removeFromCart(item.id)}>
+                      <button 	data-event="eliminar_del_carrito" className="btn btn-circle btn-error" onClick={() => removeFromCart(item.id)}>   
                         <TrashIcon className="w-4 h-4" />
                       </button>
                     </div>
@@ -181,6 +181,7 @@ const Header: React.FC = () => {
                   <span className="font-bold text-lg text-[#222]">S/. {total.toFixed(2)}</span>
                 </div>
                 <button
+                data-event="revisar_carrito"
                   className="btn btn-success py-2 rounded-lg text-[#222]"
                   onClick={() => {
                     setDrawerOpen(false);

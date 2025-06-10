@@ -79,6 +79,7 @@ const Cart: React.FC = () => {
                     type="button"
                     className="btn bg-primary rounded-lg"
                     onClick={handleWhatsappOrder}
+                    data-event="finalizar_compra" 
                   >
                     Enviar Pedido
                   </button>
